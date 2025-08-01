@@ -20,7 +20,7 @@ public class generador : MonoBehaviour
             Instantiate(pipePrefab, new Vector2
             (Generador.transform.position.x,
             Generador.transform.position.y
-            + Random.Range(-9.5f, 0.5f)), Generador.transform.rotation);
+            + Random.Range(-0.5f, 1.5f)), Generador.transform.rotation);
             Destroy(newObstacle, 5f);
         }
     }

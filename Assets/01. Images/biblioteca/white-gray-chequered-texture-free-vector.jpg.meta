@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      white-gray-chequered-texture-free-vector_0: -7087317366329957760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
