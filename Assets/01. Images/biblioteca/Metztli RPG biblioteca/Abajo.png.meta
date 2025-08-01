@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 554b053155aeb804294ba7ca303f6a47
+guid: 6b14caf1308cdf34c946850659865f41
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1758446297992294380
-    second: tyler-smith-tundramigrationfinalrender01_0
+      213: -4823894710796432303
+    second: Abajo_0
+  - first:
+      213: -6880442741611512763
+    second: Abajo_1
+  - first:
+      213: 8296323142174906616
+    second: Abajo_2
+  - first:
+      213: 7215913467725104042
+    second: Abajo_3
+  - first:
+      213: 6103754341237612700
+    second: Abajo_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,19 +109,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -135,17 +134,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tyler-smith-tundramigrationfinalrender01_0
+      name: Abajo_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3840
-        height: 2162
+        x: 33
+        y: 172
+        width: 147
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +166,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 410919b986eb897e0800000000000000
-      internalID: -1758446297992294380
+      spriteID: 15cc71191551e0db0800000000000000
+      internalID: -4823894710796432303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Abajo_1
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 173
+        width: 162
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cb4d8d7c1c380a0800000000000000
+      internalID: -6880442741611512763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Abajo_2
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 173
+        width: 179
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f8103721f5722370800000000000000
+      internalID: 8296323142174906616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Abajo_3
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 173
+        width: 181
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa346bd3113142460800000000000000
+      internalID: 7215913467725104042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Abajo_4
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 174
+        width: 164
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9067b9fb34e4b450800000000000000
+      internalID: 6103754341237612700
       vertices: []
       indices: 
       edges: []
@@ -174,7 +274,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tyler-smith-tundramigrationfinalrender01_0: -1758446297992294380
+      Abajo_0: -4823894710796432303
+      Abajo_1: -6880442741611512763
+      Abajo_2: 8296323142174906616
+      Abajo_3: 7215913467725104042
+      Abajo_4: 6103754341237612700
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

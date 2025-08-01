@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 554b053155aeb804294ba7ca303f6a47
+guid: 2c233f61647b5484daaf30eb6f605e9a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1758446297992294380
-    second: tyler-smith-tundramigrationfinalrender01_0
+      213: -3103780489868026333
+    second: Arriba_0
+  - first:
+      213: -3689961770462038466
+    second: Arriba_1
+  - first:
+      213: -1093632932897208685
+    second: Arriba_2
+  - first:
+      213: 4000163254294379331
+    second: Arriba_3
+  - first:
+      213: 5955277157667989289
+    second: Arriba_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,19 +109,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -135,17 +134,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tyler-smith-tundramigrationfinalrender01_0
+      name: Arriba_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3840
-        height: 2162
+        x: 33
+        y: 172
+        width: 147
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +166,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 410919b986eb897e0800000000000000
-      internalID: -1758446297992294380
+      spriteID: 32ed0a8c6182de4d0800000000000000
+      internalID: -3103780489868026333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arriba_1
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 172
+        width: 213
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e36b6dce15f9accc0800000000000000
+      internalID: -3689961770462038466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arriba_2
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 173
+        width: 183
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3964eff44a2a2d0f0800000000000000
+      internalID: -1093632932897208685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arriba_3
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 173
+        width: 179
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34b79c7394f638730800000000000000
+      internalID: 4000163254294379331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arriba_4
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 174
+        width: 162
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9276cc1c50565a250800000000000000
+      internalID: 5955277157667989289
       vertices: []
       indices: 
       edges: []
@@ -174,7 +274,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tyler-smith-tundramigrationfinalrender01_0: -1758446297992294380
+      Arriba_0: -3103780489868026333
+      Arriba_1: -3689961770462038466
+      Arriba_2: -1093632932897208685
+      Arriba_3: 4000163254294379331
+      Arriba_4: 5955277157667989289
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 554b053155aeb804294ba7ca303f6a47
+guid: 097c834e7d7a28d4880617df9841c54e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1758446297992294380
-    second: tyler-smith-tundramigrationfinalrender01_0
+      213: -6766912438278334784
+    second: Izquierda copia idle_0
+  - first:
+      213: 580372334387667340
+    second: Izquierda copia idle_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,19 +100,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -135,17 +125,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tyler-smith-tundramigrationfinalrender01_0
+      name: Izquierda copia idle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3840
-        height: 2162
+        x: 75
+        y: 172
+        width: 119
+        height: 493
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +157,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 410919b986eb897e0800000000000000
-      internalID: -1758446297992294380
+      spriteID: 0c65f327df81712a0800000000000000
+      internalID: -6766912438278334784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Izquierda copia idle_1
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 172
+        width: 116
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8124ac2095ed0800800000000000000
+      internalID: 580372334387667340
       vertices: []
       indices: 
       edges: []
@@ -174,7 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tyler-smith-tundramigrationfinalrender01_0: -1758446297992294380
+      Izquierda copia idle_0: -6766912438278334784
+      Izquierda copia idle_1: 580372334387667340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
