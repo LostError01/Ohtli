@@ -412,8 +412,8 @@ GameObject:
   - component: {fileID: 1587050645}
   - component: {fileID: 1587050647}
   m_Layer: 0
-  m_Name: bee_0
-  m_TagString: Untagged
+  m_Name: Metz_Canoa
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -463,7 +463,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -9080072142282165747, guid: 2e2797ab654c55542a7d7d6fd87654e4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -526,7 +526,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 25.273445, y: 28.75}
+    oldSize: {x: 31.591805, y: 35.9375}
     newSize: {x: 2.55, y: 2.17}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -909,14 +909,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.98841166, b: 0.73018867, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1758446297992294380, guid: 554b053155aeb804294ba7ca303f6a47, type: 3}
+  m_Sprite: {fileID: 2369613004986471336, guid: 8e1e45c7af4838c40b27deab756720c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
