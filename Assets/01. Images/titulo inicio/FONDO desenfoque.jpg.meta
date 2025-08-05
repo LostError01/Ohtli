@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FONDO desenfoque_0: -6156553336512368127
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
