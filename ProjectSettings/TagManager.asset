@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - point
+  - NPC01
+  - NPC02
   layers:
   - Default
   - TransparentFX
