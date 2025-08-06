@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class control : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class control : MonoBehaviour
 
     public int tipo = -1;
     private Animator _animator;
+    private Animator animator;
+    public UnityEvent OnClicked;
     private void Llamar()
     {
         _animator = GetComponent<Animator>();
@@ -21,10 +24,24 @@ public class control : MonoBehaviour
         {
             tipo = UnityEngine.Random.Range(0,prefabs.Count);
         }
-        Instantiate(prefabs[tipo], transform.position, transform.rotation,transform);
-        Revelar();
+        GameObject instancia = Instantiate(prefabs[tipo], transform.position, transform.rotation,transform);
+        animator = instancia.GetComponent<Animator>();
     }
 
+    private void OnMouseUpAsButton()
+    {
+        OnClicked.Invoke();
+    }
+    public void test()
+    {
+        IEnumerator animationc()
+        {
+            Revelar();
+            yield return new WaitForSeconds(5);
+            esconder();
+        }
+        StartCoroutine(routine:animationc());
+    }
     void Update()
     {
         
@@ -32,13 +49,13 @@ public class control : MonoBehaviour
     public void Revelar()
     {
         _animator.SetBool(name: "revelar", value: true);
-        _animator.SetBool(name: "visible", value: true);
+        animator.SetBool(name: "visible", value: true);
 
     }
 
     public void esconder()
     {
         _animator.SetBool(name:"revelar", value: false);
-        _animator.SetBool(name: "visible", value: false);
+        animator.SetBool(name: "visible", value: false);
     }
 }
