@@ -32,10 +32,13 @@ public class control : MonoBehaviour
     public void Revelar()
     {
         _animator.SetBool(name: "revelar", value: true);
+        _animator.SetBool(name: "visible", value: true);
+
     }
 
     public void esconder()
     {
         _animator.SetBool(name:"revelar", value: false);
+        _animator.SetBool(name: "visible", value: false);
     }
 }
