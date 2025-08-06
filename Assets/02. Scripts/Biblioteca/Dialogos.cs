@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Dialogos : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class Dialogos : MonoBehaviour
     [Header("Texto")]
     public Text textoDialogo;
 
-    private string[] dialogo = new string[]
+    [Header("Velocidad de Texto")]
+    [SerializeField] private float velocidadTexto = 0.1f;
+
+    private string[] dialogo = new string[] // (Poner un espacio antes del dialogo)
     {
         "Lorem ipsum o como sea",
         "Dialogo 2 ehhhh ahhh necesito hacer el dialogo largo a ver si se adapta el texto al tamaniooo del cuadro de texto ajajajajajaaj",
@@ -19,7 +23,18 @@ public class Dialogos : MonoBehaviour
         "Dialogo 4, Sample Text, haga click dos veces para editar aaaaaaa"
     };
 
+    // INDICE DEL DIALOGO ACTUAL
+    private int dialogoIndex;
+
+    // ESTADO DEL DIALOGO
     private bool dialogoActivo = false;
+
+    // VARIABLE PARA SABER SI YA SE HA ESCRITO EL TEXTO
+    private bool haEscrito = false ;
+
+    // VARIABLE PARA EVITAR QUE SE ESCRIBA EL TEXTO VARIAS VECES
+    private bool botonApretado = false;
+
     void Start()
     {
         
@@ -31,10 +46,25 @@ public class Dialogos : MonoBehaviour
         if (dialogoActivo)
         {
             animDialogo.SetBool("MostrarDialogo", true);
+            if (!haEscrito)
+            {
+                StartCoroutine(EfectoTexto());
+                haEscrito = true;
+            }
         }
         else
         {
             animDialogo.SetBool("MostrarDialogo", false);
+            haEscrito = false;
+        }
+    }
+
+    IEnumerator EfectoTexto()
+    {
+        foreach (char letra in dialogo[dialogoIndex].ToCharArray())
+        {
+            textoDialogo.text += letra;
+            yield return new WaitForSeconds(velocidadTexto);
         }
     }
 
@@ -42,19 +72,25 @@ public class Dialogos : MonoBehaviour
     {
         if (collision.CompareTag("NPC01"))
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.E) && !botonApretado)
             {
+                textoDialogo.text = string.Empty;
                 dialogoActivo = true;
-                textoDialogo.text = dialogo[0]; 
+                dialogoIndex = 0;
+
+                botonApretado = true;
             }
         }
 
         if (collision.CompareTag("NPC02"))
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.E) && !botonApretado)
             {
+                textoDialogo.text = string.Empty;
                 dialogoActivo = true;
-                textoDialogo.text = dialogo[1];
+                dialogoIndex = 1;
+
+                botonApretado = true;
             }
         }
     }
@@ -64,6 +100,7 @@ public class Dialogos : MonoBehaviour
         if (collision.CompareTag("NPC01") || collision.CompareTag("NPC02"))
         {
             dialogoActivo = false;
+            botonApretado = false;
         }
     }
 }

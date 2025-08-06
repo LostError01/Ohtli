@@ -503,6 +503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animDialogo: {fileID: 1605548360}
   textoDialogo: {fileID: 453425679}
+  velocidadTexto: 0.05
 --- !u!1 &259496677
 GameObject:
   m_ObjectHideFlags: 0
