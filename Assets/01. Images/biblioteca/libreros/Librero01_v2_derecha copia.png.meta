@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6fc942b499d791946bd3bdb0fe4ca998
+guid: e4b1a96c28cbd0844bdd6abe1012a729
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5828387126874049622
-    second: Librero02_izquierda_0
+      213: 5401200707410119378
+    second: Librero01_v2_derecha copia_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Librero02_izquierda_0
+      name: Librero01_v2_derecha copia_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 36
-        width: 369
-        height: 584
+        x: 52
+        y: 8
+        width: 347
+        height: 609
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65c89c6363792e050800000000000000
-      internalID: 5828387126874049622
+      spriteID: 2dac4c53d6be4fa40800000000000000
+      internalID: 5401200707410119378
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Librero02_izquierda_0: 5828387126874049622
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
