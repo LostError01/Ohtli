@@ -594,7 +594,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
-  wallPushBack: 0.05
+  wallSlideSpeed: 1.5
 --- !u!1 &466312645
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,7 +906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1181910892}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: wallDetect
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
@@ -938,7 +938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1841915104}
   - component: {fileID: 1841915103}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: white-gray-chequered-texture-free-vector_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
