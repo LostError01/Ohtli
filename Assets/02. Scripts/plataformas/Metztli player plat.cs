@@ -87,7 +87,7 @@ public class MetztliPlayerPlat : MonoBehaviour
         if (isGround && jumped)
         {
             jumped = false;
-            Panim.SetBool("Jump", false);
+            Panim.SetTrigger("Jump");
         }
     }
 
@@ -118,7 +118,7 @@ public class MetztliPlayerPlat : MonoBehaviour
         {
             jumped = true;
             PlayerRB.linearVelocity = new Vector2(PlayerRB.linearVelocity.x, jumpPower);
-            Panim.SetBool("Jump", true);
+            Panim.SetTrigger("Jump");
         }
     }
 }

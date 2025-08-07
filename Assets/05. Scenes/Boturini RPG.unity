@@ -466,7 +466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1307514420}
   - component: {fileID: 1307514421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Attack
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ Transform:
   m_GameObject: {fileID: 1881376046}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.51, y: 0, z: 0}
+  m_LocalPosition: {x: 8.57, y: 0, z: 0}
   m_LocalScale: {x: 3.1151323, y: 3.1151323, z: 3.1151323}
   m_ConstrainProportionsScale: 0
   m_Children: []
