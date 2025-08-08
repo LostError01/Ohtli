@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5238102548dbe9b458bf0258176b1fb0
+guid: ac1b869b1aaa1a144a8b0e86062b1753
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6384319477972744767
-    second: Librero02_v2_izquierda copia3_0
+      213: 7984433295915729341
+    second: Librero02_v2_izquierda 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Librero02_v2_izquierda copia3_0
+      name: Librero02_v2_izquierda 1_0
       rect:
         serializedVersion: 2
         x: 26
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c5c3d6a2475667a0800000000000000
-      internalID: -6384319477972744767
+      spriteID: db1cbdf77c76ece60800000000000000
+      internalID: 7984433295915729341
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Librero02_v2_izquierda copia3_0: -6384319477972744767
+      Librero02_v2_izquierda 1_0: 7984433295915729341
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

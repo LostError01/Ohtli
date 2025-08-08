@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 5238102548dbe9b458bf0258176b1fb0
+guid: ab686738fd5fc474ca46030878f456d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6384319477972744767
-    second: Librero02_v2_izquierda copia3_0
+      213: 6343654279183051142
+    second: Librero02_frente 1_0
+  - first:
+      213: 2563049593290107494
+    second: Librero02_frente 1_1
+  - first:
+      213: 1521359490388626858
+    second: Librero02_frente 1_2
+  - first:
+      213: 6926254439096419470
+    second: Librero02_frente 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Librero02_v2_izquierda copia3_0
+      name: Librero02_frente 1_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 36
-        width: 369
-        height: 585
+        x: 370
+        y: 624
+        width: 30
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +163,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c5c3d6a2475667a0800000000000000
-      internalID: -6384319477972744767
+      spriteID: 689a790f4ff290850800000000000000
+      internalID: 6343654279183051142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Librero02_frente 1_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 433
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a24c58608c19320800000000000000
+      internalID: 2563049593290107494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Librero02_frente 1_2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 12
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad88406564fc1510800000000000000
+      internalID: 1521359490388626858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Librero02_frente 1_3
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 15
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84805a27bffe1060800000000000000
+      internalID: 6926254439096419470
       vertices: []
       indices: 
       edges: []
@@ -174,7 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Librero02_v2_izquierda copia3_0: -6384319477972744767
+      Librero02_frente 1_0: 6343654279183051142
+      Librero02_frente 1_1: 2563049593290107494
+      Librero02_frente 1_2: 1521359490388626858
+      Librero02_frente 1_3: 6926254439096419470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
