@@ -513,7 +513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &83759940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1485,7 +1485,7 @@ Transform:
   m_GameObject: {fileID: 445517744}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.88, y: 10.95, z: -10}
+  m_LocalPosition: {x: 5.4630103, y: 10.94989, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3682,7 +3682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1526364271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3744,7 +3744,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!224 &1526364274
 RectTransform:
@@ -5093,8 +5093,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 569258922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2007110996
-BoxCollider2D:
+--- !u!60 &2007110996
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5127,7 +5127,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.00015544891}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5137,8 +5137,15 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 39.939857, y: 39.965904}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 35.46982, y: 1.2620629}
+      - {x: 35.468327, y: 19.721119}
+      - {x: -1.8953949, y: 19.710505}
+      - {x: -1.9101045, y: -4.14687}
+      - {x: 7.8587904, y: -4.144973}
+      - {x: 35.45183, y: -4.063178}
+  m_UseDelaunayMesh: 0
 --- !u!1 &2025445182
 GameObject:
   m_ObjectHideFlags: 0

@@ -223,7 +223,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Monte Serpiente_0: 4953694675495288495
+      Monte Serpiente_1: 6771814729602175416
+      Monte Serpiente_2: 1955157419877414742
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

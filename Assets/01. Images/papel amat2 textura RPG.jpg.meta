@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      papel amat2 textura RPG_0: -1184336587787396398
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

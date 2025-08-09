@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Ink.Runtime;
 
 public class Dialogos : MonoBehaviour
 {
