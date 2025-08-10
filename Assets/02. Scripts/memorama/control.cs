@@ -7,12 +7,11 @@ public class control : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> prefabs;
-
-
     public int tipo = -1;
     private Animator _animator;
     private Animator animator;
-    public UnityEvent OnClicked;
+    public UnityEvent<control> OnClicked;
+
     private void Llamar()
     {
         _animator = GetComponent<Animator>();
@@ -30,7 +29,7 @@ public class control : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        OnClicked.Invoke();
+        OnClicked.Invoke(this);
     }
     public void test()
     {
