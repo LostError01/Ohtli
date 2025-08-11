@@ -487,6 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Prefab: {fileID: 3253615650623572569, guid: 42166443dbcd4224280548d268d830b0, type: 3}
   "tama\xF1o": 2
+  pares: 8
 --- !u!4 &1309412159
 Transform:
   m_ObjectHideFlags: 0
