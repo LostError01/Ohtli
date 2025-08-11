@@ -7,6 +7,8 @@ public class PlayerMetzBiblio : MonoBehaviour
     Rigidbody2D prb;
     Vector2 mov;
 
+    private bool dialogo = false;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -17,7 +19,7 @@ public class PlayerMetzBiblio : MonoBehaviour
         mov = new Vector2(//WASD diagonales
          Input.GetAxisRaw("Horizontal"),
          Input.GetAxisRaw("Vertical"));
-        if (mov != Vector2.zero) //! diferente
+        if (mov != Vector2.zero && !dialogo) //! diferente
         {
             anim.SetFloat("MovX", mov.x);//izq der
             anim.SetFloat("MovY", mov.y);//arriba ab
@@ -30,7 +32,17 @@ public class PlayerMetzBiblio : MonoBehaviour
     }
     void FixedUpdate()
     {
-        prb.MovePosition
-        (prb.position + mov * speed * Time.deltaTime);
+        if (DialogosManager.GetInstance().dialogoActivo)
+        {
+            dialogo = true;
+            prb.linearVelocity = Vector2.zero;
+            return;
+        }
+        else
+        {
+            dialogo = false;
+            prb.MovePosition
+            (prb.position + mov * speed * Time.deltaTime);
+        }
     }
 }

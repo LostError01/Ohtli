@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      papel verjurado textura_0: -5664184268390680448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

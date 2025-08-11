@@ -2,105 +2,47 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Ink.Runtime;
+using System;
 
 public class Dialogos : MonoBehaviour
 {
+    [Header("Ink JSON")]
+    [SerializeField] private TextAsset inkJSON;
 
-    [Header("Animator del Dialogo")]
-    public Animator animDialogo;
+    [Header("Dialogo Animator")]
+    [SerializeField] private Animator dialogoAnimator;
 
-    [Header("Texto")]
-    public Text textoDialogo;
+    //VARIABLE PARA SABER SI EL JUGADOR ESTÁ EN EL TRIGGER
+    private bool playerInTrigger = false;
 
-    [Header("Velocidad de Texto")]
-    [SerializeField] private float velocidadTexto = 0.1f;
-
-    private string[] dialogo = new string[] // (Poner un espacio antes del dialogo)
+    private void Update()
     {
-        "Lorem ipsum o como sea",
-        "Dialogo 2 ehhhh ahhh necesito hacer el dialogo largo a ver si se adapta el texto al tamaniooo del cuadro de texto ajajajajajaaj",
-        "Hola dialogo 3 inserte texto aquí",
-        "Dialogo 4, Sample Text, haga click dos veces para editar aaaaaaa"
-    };
-
-    // INDICE DEL DIALOGO ACTUAL
-    private int dialogoIndex;
-
-    // ESTADO DEL DIALOGO
-    private bool dialogoActivo = false;
-
-    // VARIABLE PARA SABER SI YA SE HA ESCRITO EL TEXTO
-    private bool haEscrito = false ;
-
-    // VARIABLE PARA EVITAR QUE SE ESCRIBA EL TEXTO VARIAS VECES
-    private bool botonApretado = false;
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        //Mostar animacion del dialogo
-        if (dialogoActivo)
+        if(playerInTrigger)
         {
-            animDialogo.SetBool("MostrarDialogo", true);
-            if (!haEscrito)
+            if(Input.GetKeyDown(KeyCode.E))
             {
-                StartCoroutine(EfectoTexto());
-                haEscrito = true;
+                dialogoAnimator.SetBool("MostrarDialogo",true);
+                DialogosManager.GetInstance().IniciarDialogo(inkJSON);
             }
-        }
-        else
-        {
-            animDialogo.SetBool("MostrarDialogo", false);
-            haEscrito = false;
         }
     }
 
-    IEnumerator EfectoTexto()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        foreach (char letra in dialogo[dialogoIndex].ToCharArray())
+        if (collision.gameObject.CompareTag("Player"))
         {
-            textoDialogo.text += letra;
-            yield return new WaitForSeconds(velocidadTexto);
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("NPC01"))
-        {
-            if (Input.GetKey(KeyCode.E) && !botonApretado)
-            {
-                textoDialogo.text = string.Empty;
-                dialogoActivo = true;
-                dialogoIndex = 0;
-
-                botonApretado = true;
-            }
-        }
-
-        if (collision.CompareTag("NPC02"))
-        {
-            if (Input.GetKey(KeyCode.E) && !botonApretado)
-            {
-                textoDialogo.text = string.Empty;
-                dialogoActivo = true;
-                dialogoIndex = 1;
-
-                botonApretado = true;
-            }
+            // Entra al diálogo
+            playerInTrigger = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("NPC01") || collision.CompareTag("NPC02"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            dialogoActivo = false;
-            botonApretado = false;
+            // Sale del diálogo
+            playerInTrigger = false;
         }
     }
 }

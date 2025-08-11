@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      papel amat2 textura fondo png_0: 5036509996520155211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
