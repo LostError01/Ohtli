@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 9653e332ff8cf2e4a9a882df22f6586d
+guid: 0d6696b66d1975645ba36ebb349e5d08
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4391987118634810695
-    second: Canoa copia_0
+      213: 2464373082980913286
+    second: ZCodice_Idle1_0
   - first:
-      213: -7042147947306335498
-    second: Canoa copia_1
+      213: 8403973215453319986
+    second: ZCodice_Idle1_1
+  - first:
+      213: 5451232054654060999
+    second: ZCodice_Idle1_2
+  - first:
+      213: -4610847697809314515
+    second: ZCodice_Idle1_3
+  - first:
+      213: 9042382919379204506
+    second: ZCodice_Idle1_4
+  - first:
+      213: -3133098564836354545
+    second: ZCodice_Idle1_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 700
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -142,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Canoa copia_0
+      name: ZCodice_Idle1_0
       rect:
         serializedVersion: 2
-        x: 66
-        y: 58
-        width: 2481
-        height: 995
+        x: 444
+        y: 625
+        width: 13
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b24eaf3cf68c03c0800000000000000
-      internalID: -4391987118634810695
+      spriteID: 6809c1d1346333220800000000000000
+      internalID: 2464373082980913286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Canoa copia_1
+      name: ZCodice_Idle1_1
       rect:
         serializedVersion: 2
-        x: 2573
-        y: 788
-        width: 35
-        height: 72
+        x: 155
+        y: 24
+        width: 322
+        height: 569
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +191,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f24f09b0c3454e90800000000000000
-      internalID: -7042147947306335498
+      spriteID: 2331ef00d19e0a470800000000000000
+      internalID: 8403973215453319986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZCodice_Idle1_2
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 223
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c9c0edfbaaa6ab40800000000000000
+      internalID: 5451232054654060999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZCodice_Idle1_3
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 208
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2de5aab27af200c0800000000000000
+      internalID: -4610847697809314515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZCodice_Idle1_4
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 213
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9938a84b5ffc7d70800000000000000
+      internalID: 9042382919379204506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZCodice_Idle1_5
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 205
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0694a4847ff484d0800000000000000
+      internalID: -3133098564836354545
       vertices: []
       indices: 
       edges: []
@@ -199,8 +299,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Canoa copia_0: -4391987118634810695
-      Canoa copia_1: -7042147947306335498
+      ZCodice_Idle1_0: 2464373082980913286
+      ZCodice_Idle1_1: 8403973215453319986
+      ZCodice_Idle1_2: 5451232054654060999
+      ZCodice_Idle1_3: -4610847697809314515
+      ZCodice_Idle1_4: 9042382919379204506
+      ZCodice_Idle1_5: -3133098564836354545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 9653e332ff8cf2e4a9a882df22f6586d
+guid: 1702bd6fcb5273440b8c8312ad73447f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4391987118634810695
-    second: Canoa copia_0
-  - first:
-      213: -7042147947306335498
-    second: Canoa copia_1
+      213: -727381662511841227
+    second: ALDEANO2_0002_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 700
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -142,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Canoa copia_0
+      name: ALDEANO2_0002_0
       rect:
         serializedVersion: 2
-        x: 66
-        y: 58
-        width: 2481
-        height: 995
+        x: 98
+        y: 103
+        width: 425
+        height: 514
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,30 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b24eaf3cf68c03c0800000000000000
-      internalID: -4391987118634810695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Canoa copia_1
-      rect:
-        serializedVersion: 2
-        x: 2573
-        y: 788
-        width: 35
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6f24f09b0c3454e90800000000000000
-      internalID: -7042147947306335498
+      spriteID: 53049d55b32d7e5f0800000000000000
+      internalID: -727381662511841227
       vertices: []
       indices: 
       edges: []
@@ -199,8 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Canoa copia_0: -4391987118634810695
-      Canoa copia_1: -7042147947306335498
+      ALDEANO2_0002_0: -727381662511841227
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
