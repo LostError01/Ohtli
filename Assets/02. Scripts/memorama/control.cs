@@ -7,6 +7,7 @@ public class control : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> prefabs;
+    public int maxpares => prefabs.Count;
     public int tipo = -1;
     private Animator _animator;
     private Animator animator;
@@ -37,7 +38,7 @@ public class control : MonoBehaviour
         {
             Revelar();
             yield return new WaitForSeconds(5);
-            esconder();
+            //esconder();
         }
         StartCoroutine(routine:animationc());
     }
