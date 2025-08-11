@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: 75b3d1d54fada974a8950cbcdab13713
+guid: d3351fc171f014c489a15f0e59bed431
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6199122978237892286
+    second: Remo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,45 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: platscolor_0
+      name: Remo_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 28
-        width: 290
-        height: 87
+        x: 995
+        y: 657
+        width: 415
+        height: 1844
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5b4387c256546c24080b183ec31f7e84
-      internalID: 1156961096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: platscolor_1
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 28
-        width: 394
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b078c0cd129dc36468413eb6af07e141
-      internalID: 986926698
+      spriteID: 2493b23ee7a48f9a0800000000000000
+      internalID: -6199122978237892286
       vertices: []
       indices: 
       edges: []
@@ -183,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d70891054753c23498c0af809a415ea5
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -192,9 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      platscolor_0: 1156961096
-      platscolor_1: 986926698
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
