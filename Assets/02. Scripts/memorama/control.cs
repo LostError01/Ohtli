@@ -32,20 +32,6 @@ public class control : MonoBehaviour
     {
         OnClicked.Invoke(this);
     }
-    public void test()
-    {
-        IEnumerator animationc()
-        {
-            Revelar();
-            yield return new WaitForSeconds(5);
-            //esconder();
-        }
-        StartCoroutine(routine:animationc());
-    }
-    void Update()
-    {
-        
-    }
     public void Revelar()
     {
         _animator.SetBool(name: "revelar", value: true);

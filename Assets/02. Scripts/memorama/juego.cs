@@ -18,8 +18,9 @@ public class juego : MonoBehaviour
     private int columnas = 4;
     private int filas = 4;
     private control carta1;
+    private bool imput = true;
 
-    public void start()
+     void Start()
     {
         if (pares > 8)
         {
@@ -55,14 +56,19 @@ public class juego : MonoBehaviour
                 _cartas.Add(card);
 
             }
-
         }
+        imput = false;
     }
     public void oncardcliked(control card)
     {
+        if (imput)
+        {
+            return;
+        }
+        imput=true;
         if (carta1 == null)
         {
-            seleccionar(card);
+           StartCoroutine(seleccionar(card));
             return;
         }
         if (card.tipo == carta1.tipo)
@@ -72,31 +78,41 @@ public class juego : MonoBehaviour
         }
         StartCoroutine(fallar(card));
     }
-    private void seleccionar(control card)
+    private IEnumerator seleccionar(control card)
     {
         carta1 = card;
         carta1.Revelar();
+        yield return new WaitForSeconds(.5f);
+        imput = false;
     }
     private IEnumerator acertar(control card)
     {
         card.Revelar();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         _cartas.Remove(carta1);
         _cartas.Remove(card);
-        Destroy(card);
-        Destroy(carta1);
+        Destroy(card.gameObject);
+        Destroy(carta1.gameObject);
         carta1 = null;
+        imput = false;
+        if (_cartas.Count <1)
+        {
+            ganar();
+        }
     }
     private IEnumerator fallar(control card)
     {
         card.Revelar();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         carta1.esconder();
         card.esconder();
         carta1 = null;
+        yield return new WaitForSeconds(.5f);
+        imput = false;
     }
-    void Start() 
-    {   
-        start();
+    private void ganar()
+    {
+
     }
+
 }
