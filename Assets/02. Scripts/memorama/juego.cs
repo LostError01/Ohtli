@@ -11,7 +11,7 @@ public class juego : MonoBehaviour
     [SerializeField]
     private control _Prefab;
     [SerializeField]
-    private float tamaño = 4f;
+    private float tamano = 4f;
     [SerializeField]
     private int pares = 8;
     private List<control> _cartas = new List<control>();
@@ -43,12 +43,12 @@ public class juego : MonoBehaviour
         Debug.Assert((filas * columnas) % 2 == 0);
         _cartas.ForEach(c => Destroy(c.gameObject));
         _cartas.Clear();
-        Vector3 offset = new Vector3((columnas - 1) * tamaño, (filas - 1) * tamaño, 0) * 0.5f;
+        Vector3 offset = new Vector3((columnas - 1) * tamano, (filas - 1) * tamano, 0) * 0.5f;
         for (int i = 0; i < filas; i++)
         {
             for (int j = 0; j < columnas; j++)
             {
-                Vector3 posicion = new Vector3(i * tamaño, j * tamaño, 0f);
+                Vector3 posicion = new Vector3(i * tamano, j * tamano, 0f);
                 var card = Instantiate(_Prefab, posicion - offset, Quaternion.identity);
                 card.tipo = gametodos[UnityEngine.Random.Range(0, gametodos.Count)];
                 gametodos.Remove(card.tipo);
