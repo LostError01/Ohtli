@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 9184274822934795376, guid: c3b1aa911eebef4419fcb148aab70adf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9137255}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -268,7 +268,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 2391290549793393517, guid: 195501b6f6b41fd49820b94a1ec40116, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9254902}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -511,7 +511,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -4066677294444713146, guid: 511499d2dd1bf4548811e62bb56a995b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9137255}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -530,7 +530,7 @@ Transform:
   m_GameObject: {fileID: 984878960}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.928485, y: 3.14, z: 0}
+  m_LocalPosition: {x: 1.71, y: -2.54, z: 0}
   m_LocalScale: {x: 0.70301, y: 0.70301, z: 0.70301}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5663,7 +5663,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 4953694675495288495, guid: c928a81ed5ca42c47b81d98f4dec4ca2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8980392}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5682,8 +5682,8 @@ Transform:
   m_GameObject: {fileID: 1153679774}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9533467, y: -2.88, z: 0}
-  m_LocalScale: {x: 0.53331, y: 0.53331, z: 0.53331}
+  m_LocalPosition: {x: 2.9533467, y: 3.33, z: 0}
+  m_LocalScale: {x: 0.4541188, y: 0.4541188, z: 0.4541188}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5750,7 +5750,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 6614122376100721538, guid: f00e8a3320685954d88184acfabac374, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6102,7 +6102,7 @@ GameObject:
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1601107304
 MonoBehaviour:
   m_ObjectHideFlags: 0
