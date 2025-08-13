@@ -7,7 +7,7 @@ using System;
 
 public class Dialogos : MonoBehaviour
 {
-    [Header("Ink JSON")]
+    [Header("Ink JSON Default")]
     [SerializeField] private TextAsset inkJSON;
 
     [Header("Dialogo Animator")]

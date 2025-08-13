@@ -39,6 +39,9 @@ public class DialogosManager : MonoBehaviour
     //Bloqueo de spacebar mientras se toma una decision
     private bool bloqueoSpacebar = false;
 
+    //Variable para saber si se eligio la opcion Si
+    private bool decisionSi = false;
+
     public bool dialogoActivo { get; private set; }
 
     private static DialogosManager instance;
@@ -170,5 +173,10 @@ public class DialogosManager : MonoBehaviour
         dialogoText.text = historiaActual.Continue();
         DecisionTomada = true;
         bloqueoSpacebar = false;
+    }
+
+    public void DecisionSi()
+    {
+        decisionSi = true;
     }
 }

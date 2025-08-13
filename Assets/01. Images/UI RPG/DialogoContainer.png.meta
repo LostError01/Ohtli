@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b4d0db8931a7f764a8dd27dffe6b1b80
+guid: 2a2dbc5ce7b17094f91d4fe72b26f912
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8237433316715046797
-    second: BibliotecaReescalada final_0
+      213: -157920887495304286
+    second: Texto02 (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,56 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BibliotecaReescalada final_0
+      name: Texto02 (1)_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 29
-        width: 4470
-        height: 2856
+        x: 8
+        y: 27
+        width: 1235
+        height: 433
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d87a4cf25fd315270800000000000000
-      internalID: 8237433316715046797
+      spriteID: 2ab5a3e1ac3fecdf0800000000000000
+      internalID: -157920887495304286
       vertices: []
       indices: 
       edges: []
@@ -174,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BibliotecaReescalada final_0: 8237433316715046797
+      Texto02 (1)_0: -157920887495304286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
