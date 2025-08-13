@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: ac1b869b1aaa1a144a8b0e86062b1753
+guid: f8ec9bfe6ef5a5d4c99876fdea3fe1f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7984433295915729341
-    second: Librero02_v2_izquierda 1_0
+      213: 6129769196800316671
+    second: Estante2_Lado_0
+  - first:
+      213: 7664797599313468874
+    second: Estante2_Lado_1
+  - first:
+      213: 5058068524533582933
+    second: Estante2_Lado_2
+  - first:
+      213: 1106199915442497093
+    second: Estante2_Lado_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 220
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Librero02_v2_izquierda 1_0
+      name: Estante2_Lado_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 36
-        width: 369
-        height: 585
+        x: 1348
+        y: 1642
+        width: 16
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +163,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db1cbdf77c76ece60800000000000000
-      internalID: 7984433295915729341
+      spriteID: ff41a6a8b90511550800000000000000
+      internalID: 6129769196800316671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estante2_Lado_1
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1561
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd98568ec4de5a60800000000000000
+      internalID: 7664797599313468874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estante2_Lado_2
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1358
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c8866368ed13640800000000000000
+      internalID: 5058068524533582933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estante2_Lado_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 63
+        width: 991
+        height: 1230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 546648256f20a5f00800000000000000
+      internalID: 1106199915442497093
       vertices: []
       indices: 
       edges: []
@@ -174,7 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Librero02_v2_izquierda 1_0: 7984433295915729341
+      Estante2_Lado_0: 6129769196800316671
+      Estante2_Lado_1: 7664797599313468874
+      Estante2_Lado_2: 5058068524533582933
+      Estante2_Lado_3: 1106199915442497093
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
