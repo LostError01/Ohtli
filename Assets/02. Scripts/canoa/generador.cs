@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class generador : MonoBehaviour
 {
-    public GameObject pipePrefab;   
+    [SerializeField]
+    public List<GameObject> pipePrefab;
+    private int tipo = -1;
     public GameObject Generador;
     private int generadortime = 100;
     private int timer;
@@ -15,12 +17,13 @@ public class generador : MonoBehaviour
         if (timer >= generadortime)
         {
             timer = 0;
-            generadortime = Random.Range(50, 100);
+            generadortime = Random.Range(50, 90);
+            tipo = UnityEngine.Random.Range(0, pipePrefab.Count);
             GameObject newObstacle =
-            Instantiate(pipePrefab, new Vector2
-            (Generador.transform.position.x,
+            Instantiate(pipePrefab[tipo], new Vector2
+            (Generador.transform.position.x-5,
             Generador.transform.position.y
-            + Random.Range(-0.5f, 1.5f)), Generador.transform.rotation);
+            + Random.Range(-1.5f, .5f)), Generador.transform.rotation);
             Destroy(newObstacle, 5f);
         }
     }
