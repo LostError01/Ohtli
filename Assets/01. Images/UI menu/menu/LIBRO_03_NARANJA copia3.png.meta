@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LIBRO_03_NARANJA copia3_0: 5718549118972205927
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

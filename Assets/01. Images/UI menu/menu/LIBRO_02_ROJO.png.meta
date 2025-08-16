@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LIBRO_02_ROJO_0: 6992382780541965865
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
