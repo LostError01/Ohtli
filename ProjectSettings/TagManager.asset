@@ -9,11 +9,19 @@ TagManager:
   - NPC02
   - Attack
   - Light
+  - Scratch01
+  - Scratch02
+  - Scratch03
+  - Scratch04
+  - Patch01
+  - Patch02
+  - Patch03
+  - Patch04
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Objetos01
   - Water
   - UI
   - Player
