@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e9473725362205f49b6ea7e40200cb83
+guid: f7851ebfc249a9a479717c91b442405b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7923191120203160573
-    second: BOTON_JUGAR_0
+      213: 5718549118972205927
+    second: LIBRO_03_NARANJA copia3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BOTON_JUGAR_0
+      name: LIBRO_03_NARANJA copia3_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 24
-        width: 385
-        height: 155
+        x: 32
+        y: 11
+        width: 422
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dfb1d3f4854d4fd60800000000000000
-      internalID: 7923191120203160573
+      spriteID: 76b16f2202e5c5f40800000000000000
+      internalID: 5718549118972205927
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      BOTON_JUGAR_0: 7923191120203160573
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

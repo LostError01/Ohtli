@@ -278,8 +278,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -2099594654592193083, guid: 65d019a1a52e4ea479e7fdd29bbcfc84, type: 3}
+    m_PressedSprite: {fileID: 7524846512597992740, guid: b181722be1c3456449f8148865ababca, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -427,11 +427,11 @@ RectTransform:
   m_Children:
   - {fileID: 1549683264}
   - {fileID: 880573936}
-  - {fileID: 165871360}
   - {fileID: 932854198}
   - {fileID: 384489353}
-  - {fileID: 351862020}
   - {fileID: 1695612066}
+  - {fileID: 351862020}
+  - {fileID: 165871360}
   - {fileID: 200049472}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -579,8 +579,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -1665713650842472818, guid: 11b7fde67803655479d4c737c24cc547, type: 3}
+    m_PressedSprite: {fileID: 5718549118972205927, guid: f7851ebfc249a9a479717c91b442405b, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1034,7 +1034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372, y: -222}
+  m_AnchoredPosition: {x: 393, y: -241}
   m_SizeDelta: {x: 385, y: 155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1695612067
@@ -1066,8 +1066,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 1655784455833556752, guid: da1ee55fca6178147b717fcf8b36e9ca, type: 3}
+    m_PressedSprite: {fileID: 1480043982060951411, guid: 6ca89034b3fd8da45a0d93bdd0479186, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
