@@ -1,28 +1,16 @@
 fileFormatVersion: 2
-guid: 8243af27c5f6e1f4c9b42a2f832a3ffc
+guid: 22cea60fa4fa3934dbbebb74913cca4d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7767861833391959273
-    second: pies1_0
+      213: -5746071111274523605
+    second: Arbol con manos No Color_0
   - first:
-      213: -2321504352355565072
-    second: pies1_1
+      213: 7620373102002390086
+    second: Arbol con manos No Color_1
   - first:
-      213: -5684856805095851199
-    second: pies1_2
-  - first:
-      213: -8841638969434065707
-    second: pies1_3
-  - first:
-      213: -4425039988665516397
-    second: pies1_4
-  - first:
-      213: 2047558012315058810
-    second: pies1_5
-  - first:
-      213: -3426345316090702458
-    second: pies1_6
+      213: -226115470623540973
+    second: Arbol con manos No Color_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -157,13 +145,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pies1_0
+      name: Arbol con manos No Color_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 55
-        width: 89
-        height: 52
+        x: 235
+        y: 179
+        width: 267
+        height: 435
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7139b5481d2033490800000000000000
-      internalID: -7767861833391959273
+      spriteID: b24195ea4cad140b0800000000000000
+      internalID: -5746071111274523605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pies1_1
+      name: Arbol con manos No Color_1
       rect:
         serializedVersion: 2
-        x: 140
-        y: 96
-        width: 14
-        height: 10
+        x: 584
+        y: 421
+        width: 256
+        height: 252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f1c255671c58cfd0800000000000000
-      internalID: -2321504352355565072
+      spriteID: 6444bc836f001c960800000000000000
+      internalID: 7620373102002390086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pies1_2
+      name: Arbol con manos No Color_2
       rect:
         serializedVersion: 2
-        x: 138
-        y: 83
-        width: 12
-        height: 10
+        x: 627
+        y: 181
+        width: 136
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,96 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14bbc4dfad45b11b0800000000000000
-      internalID: -5684856805095851199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pies1_3
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 74
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d4b1aac3303c4580800000000000000
-      internalID: -8841638969434065707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pies1_4
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 54
-        width: 16
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 39e71be33991792c0800000000000000
-      internalID: -4425039988665516397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pies1_5
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 61
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a724b0de9236a6c10800000000000000
-      internalID: 2047558012315058810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pies1_6
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 64
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 685179ca61d2370d0800000000000000
-      internalID: -3426345316090702458
+      spriteID: 319734f6d2dacdcf0800000000000000
+      internalID: -226115470623540973
       vertices: []
       indices: 
       edges: []
@@ -314,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -324,13 +224,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pies1_0: -7767861833391959273
-      pies1_1: -2321504352355565072
-      pies1_2: -5684856805095851199
-      pies1_3: -8841638969434065707
-      pies1_4: -4425039988665516397
-      pies1_5: 2047558012315058810
-      pies1_6: -3426345316090702458
+      Arbol con manos No Color_0: -5746071111274523605
+      Arbol con manos No Color_1: 7620373102002390086
+      Arbol con manos No Color_2: -226115470623540973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
