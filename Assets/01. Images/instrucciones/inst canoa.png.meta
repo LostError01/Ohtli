@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      inst canoa_0: 4708453832185827801
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

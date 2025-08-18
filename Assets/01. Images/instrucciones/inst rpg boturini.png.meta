@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      inst rpg boturini_0: -6427428110048782660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
