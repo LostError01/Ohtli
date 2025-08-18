@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: 03f89bc10b654134c893732fc01d4ea3
+guid: 858b1c962caef5d40b317c0ec1f5a565
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1794335724972020463
-    second: Planta3_0
+      213: 2317029759789901202
+    second: Planta1 copia-2_0
   - first:
-      213: 9184274822934795376
-    second: Planta3_1
+      213: 7916314970445078442
+    second: Planta1 copia-2_1
   - first:
-      213: 6046202418399993351
-    second: Planta3_2
+      213: 2733518320287247840
+    second: Planta1 copia-2_2
   - first:
-      213: 6792078024682182587
-    second: Planta3_3
-  - first:
-      213: 1417047772948502252
-    second: Planta3_4
-  - first:
-      213: -7128536290592308165
-    second: Planta3_5
-  - first:
-      213: 9042099395799120297
-    second: Planta3_6
+      213: 2543343319046115300
+    second: Planta1 copia-2_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,33 +106,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -157,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Planta3_0
+      name: Planta1 copia-2_0
       rect:
         serializedVersion: 2
-        x: 142
-        y: 238
-        width: 7
-        height: 8
+        x: 7
+        y: 113
+        width: 188
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe210c6c5d2c6e810800000000000000
-      internalID: 1794335724972020463
+      spriteID: 29529465a4eb72020800000000000000
+      internalID: 2317029759789901202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Planta3_1
+      name: Planta1 copia-2_1
       rect:
         serializedVersion: 2
-        x: 317
-        y: 30
-        width: 292
-        height: 228
+        x: 59
+        y: 5
+        width: 223
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07497948a49157f70800000000000000
-      internalID: 9184274822934795376
+      spriteID: aaf5c7fe5866cdd60800000000000000
+      internalID: 7916314970445078442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Planta3_2
+      name: Planta1 copia-2_2
       rect:
         serializedVersion: 2
-        x: 690
-        y: 28
-        width: 221
-        height: 221
+        x: 299
+        y: 24
+        width: 223
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70ed6dcb01d68e350800000000000000
-      internalID: 6046202418399993351
+      spriteID: 0ed6eb3fd686fe520800000000000000
+      internalID: 2733518320287247840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Planta3_3
+      name: Planta1 copia-2_3
       rect:
         serializedVersion: 2
-        x: 16
-        y: 22
-        width: 219
-        height: 215
+        x: 551
+        y: 21
+        width: 225
+        height: 206
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,74 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb71beb3afe424e50800000000000000
-      internalID: 6792078024682182587
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Planta3_4
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 153
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ce69a50117d5aa310800000000000000
-      internalID: 1417047772948502252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Planta3_5
-      rect:
-        serializedVersion: 2
-        x: 673
-        y: 152
-        width: 9
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b34c3c6230a521d90800000000000000
-      internalID: -7128536290592308165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Planta3_6
-      rect:
-        serializedVersion: 2
-        x: 669
-        y: 140
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9a9716e4e7dfb7d70800000000000000
-      internalID: 9042099395799120297
+      spriteID: 4ef4b910645cb4320800000000000000
+      internalID: 2543343319046115300
       vertices: []
       indices: 
       edges: []
@@ -324,13 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Planta3_0: 1794335724972020463
-      Planta3_1: 9184274822934795376
-      Planta3_2: 6046202418399993351
-      Planta3_3: 6792078024682182587
-      Planta3_4: 1417047772948502252
-      Planta3_5: -7128536290592308165
-      Planta3_6: 9042099395799120297
+      Planta1 copia-2_0: 2317029759789901202
+      Planta1 copia-2_1: 7916314970445078442
+      Planta1 copia-2_2: 2733518320287247840
+      Planta1 copia-2_3: 2543343319046115300
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
