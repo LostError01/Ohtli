@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
+using TMPro;
 
 public class ButtonFunctions : MonoBehaviour
 {
@@ -8,11 +10,18 @@ public class ButtonFunctions : MonoBehaviour
 
     [Header("Luz Animator")]
     [SerializeField] private Animator luzAnim;
+
+    [Header("Boton Luz Provisional")]
+    [SerializeField] private Button botonLuzProvisional;
+    [SerializeField] private TextMeshProUGUI textoBotonLuzProvisional;
+
     public void PantallaRecortes()
     {
         if (animCamara.GetInteger("Pantalla") == 0)
         {
             animCamara.SetInteger("Pantalla", 1);
+            botonLuzProvisional.enabled = false;
+            textoBotonLuzProvisional.enabled = false;
         }
     }
 
@@ -21,6 +30,8 @@ public class ButtonFunctions : MonoBehaviour
         if (animCamara.GetInteger("Pantalla") == 1)
         {
             animCamara.SetInteger("Pantalla", 0);
+            botonLuzProvisional.enabled = true;
+            textoBotonLuzProvisional.enabled = true;
         }
     }
 
