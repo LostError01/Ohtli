@@ -41,7 +41,7 @@ public class QuickTimeEvent : MonoBehaviour
             secuencia[i] = letrasBase[Random.Range(0, letrasBase.Length)];
         }
 
-        cajaTexto.text = "¡Presiona en orden: ";
+        cajaTexto.text = "¡Presiona en orden: <br>";
         for (int i = 0; i < 4; i++)
             cajaTexto.text += secuencia[i] + " ";
         cajaTexto.text += "!";
@@ -77,8 +77,8 @@ public class QuickTimeEvent : MonoBehaviour
         }
         else // ¡Error! Tecla incorrecta
         {
-            cajaTexto.text = "¡Fallaste! Reiniciando...";
-            StartCoroutine(Perdiste(2f));
+                cajaTexto.text = "¡Fallaste! Reiniciando...";
+                StartCoroutine(Perdiste(2f));
         }
     }
 
