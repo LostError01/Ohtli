@@ -5,6 +5,8 @@ public class tiempo : MonoBehaviour
     public Text contador;
     public int minutos;
     public float segundos;
+    public float segundoslimite;
+    public Color rojo;
     void Start()
     {
         letreto();
@@ -13,12 +15,20 @@ public class tiempo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        segundos += Time.deltaTime;
-        if(segundos > 59 ) {
-          segundos = 0;
+        segundos -= Time.deltaTime;
+        if(segundos <= 0 ) {
+            if( minutos ==0 ) {
+                return;
+                 }
+            else {
+                segundos = 59;
             minutos -= 1;
+                 }
         }   
         letreto(); 
+        if(segundos < 0 &&  minutos < 1 ) {
+            contador.color = rojo;
+           }
     }
     public void letreto()
     {

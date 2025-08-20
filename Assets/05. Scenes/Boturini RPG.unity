@@ -462,8 +462,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
-    m_FontStyle: 0
+    m_FontSize: 15
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -495,8 +495,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contador: {fileID: 47802797}
-  minutos: 0
-  segundos: 0
+  minutos: 1
+  segundos: 5
+  segundoslimite: 60
+  rojo: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &76145652
 GameObject:
   m_ObjectHideFlags: 0
