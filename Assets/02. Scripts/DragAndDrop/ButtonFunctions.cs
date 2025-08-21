@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
+using System.Collections;
 using TMPro;
 
 public class ButtonFunctions : MonoBehaviour
@@ -11,9 +12,11 @@ public class ButtonFunctions : MonoBehaviour
     [Header("Luz Animator")]
     [SerializeField] private Animator luzAnim;
 
+    [Header("Papel Animator")]
+    [SerializeField] private Animator papelAnim;
+
     [Header("Boton Luz Provisional")]
     [SerializeField] private Button botonLuzProvisional;
-    [SerializeField] private TextMeshProUGUI textoBotonLuzProvisional;
 
     public void PantallaRecortes()
     {
@@ -21,7 +24,6 @@ public class ButtonFunctions : MonoBehaviour
         {
             animCamara.SetInteger("Pantalla", 1);
             botonLuzProvisional.enabled = false;
-            textoBotonLuzProvisional.enabled = false;
         }
     }
 
@@ -31,7 +33,6 @@ public class ButtonFunctions : MonoBehaviour
         {
             animCamara.SetInteger("Pantalla", 0);
             botonLuzProvisional.enabled = true;
-            textoBotonLuzProvisional.enabled = true;
         }
     }
 
@@ -45,5 +46,27 @@ public class ButtonFunctions : MonoBehaviour
         {
             luzAnim.SetBool("Encender", false);
         }
+    }
+
+    public void TraerPapel()
+    {
+        if (papelAnim.GetInteger("Accion") == 0)
+        {
+            papelAnim.SetInteger("Accion", 1);
+        }
+        else if (papelAnim.GetInteger("Accion") == 1)
+        {
+            papelAnim.SetInteger("Accion", 2);
+        }
+        else if (papelAnim.GetInteger("Accion") == 2)
+        {
+            papelAnim.SetInteger("Accion", 1);
+        }
+    }
+
+    private IEnumerator PapelReiniciar()
+    {
+        yield return new WaitForSeconds(1f);
+        papelAnim.SetInteger("Accion", 0);
     }
 }
