@@ -46,7 +46,7 @@ public class MetztliRPGboturini : MonoBehaviour
         if (attacking)
         {
             float playbackTime = stateInfo.normalizedTime;
-            if (playbackTime > 0.2 && playbackTime < 0.8) //<<<<
+            if (playbackTime > 0.2 && playbackTime < 0.6) //<<<<
             {
                 AttackCollider.enabled = true;
             }
