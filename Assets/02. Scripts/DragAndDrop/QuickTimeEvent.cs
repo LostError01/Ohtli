@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using Ink.Parsed;
+using System.Collections.Generic;
 public class QuickTimeEvent : MonoBehaviour
 {
     // 1. Letras a elegir y la secuencia que las guardara
@@ -17,12 +19,32 @@ public class QuickTimeEvent : MonoBehaviour
     [Header("Caja de Texto")]
     [SerializeField] private TextMeshProUGUI cajaTexto;
 
+    [Header("Pines de letra apretada correcta")]
+    [SerializeField] private List <GameObject> pinesLetras = new List <GameObject>();
+
+    [Header("Animator Ventana QuickTimeEvent")]
+    [SerializeField] private Animator ventanaQTEAnim;
+
+    private void Start()
+    {
+        foreach(GameObject pin in pinesLetras)
+        {
+            pin.SetActive(false);
+        }
+    }
+
     private void Update()
     {
         if (eventoIniciado)
+        {
             VerificarTeclas();
+            ventanaQTEAnim.SetBool("Ventana",true);
+        }
         if(!eventoIniciado)
-            cajaTexto.text = "¡Presiona el recorte deseado para iniciar el evento!";
+        {
+            ventanaQTEAnim.SetBool("Ventana",false);
+        }
+
     }
 
     private void OnMouseDown()
@@ -66,25 +88,35 @@ public class QuickTimeEvent : MonoBehaviour
         // Si la tecla presionada es igual al elemento actual de la secuencia [pasoActual] = indice
         if (teclaPresionada == secuencia[pasoActual])
         {
+            //Activar pin de letra correcta
+            pinesLetras[pasoActual].SetActive(true);
+
             pasoActual++;
 
             //Si llegas a 4
             if (pasoActual == 4)
             {
-                cajaTexto.text = "¡Éxito! Evento completado";
+                cajaTexto.text = "Recortando...";
                 StartCoroutine(Ganaste(2f));
             }
         }
         else // ¡Error! Tecla incorrecta
         {
-                cajaTexto.text = "¡Fallaste! Reiniciando...";
+                cajaTexto.text = "¡Fallaste!";
                 StartCoroutine(Perdiste(2f));
         }
     }
 
     private IEnumerator Perdiste(float delay)
     {
-        mouseHabilitado = false; 
+        mouseHabilitado = false;
+
+        //Desactivar pines de letras correctas
+        foreach (GameObject pin in pinesLetras)
+        {
+            pin.SetActive(false);
+        }
+
         yield return new WaitForSeconds(delay);
         eventoIniciado = false; 
         mouseHabilitado = true; 
@@ -92,8 +124,14 @@ public class QuickTimeEvent : MonoBehaviour
 
     private IEnumerator Ganaste(float delay)
     {
-        mouseHabilitado = false; 
+        mouseHabilitado = false;
         yield return new WaitForSeconds(delay);
+
+        foreach (GameObject pin in pinesLetras)
+        {
+            pin.SetActive(false);
+        }
+
         eventoIniciado = false; 
         mouseHabilitado = true; 
     }
