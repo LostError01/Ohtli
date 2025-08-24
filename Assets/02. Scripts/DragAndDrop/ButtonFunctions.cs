@@ -12,6 +12,9 @@ public class ButtonFunctions : MonoBehaviour
     [Header("Luz Animator")]
     [SerializeField] private Animator luzAnim;
 
+    [Header("Pantalla de Luz Animator")]
+    [SerializeField] private Animator PantallaLuzAnim;
+
     [Header("Papel Animator")]
     [SerializeField] private Animator papelAnim;
 
@@ -41,24 +44,18 @@ public class ButtonFunctions : MonoBehaviour
         if(luzAnim.GetBool("Encender") == false)
         {
             luzAnim.SetBool("Encender", true);
+            PantallaLuzAnim.SetBool("Encendida", true);
         }
         else
         {
             luzAnim.SetBool("Encender", false);
+            PantallaLuzAnim.SetBool("Encendida", false);
         }
     }
 
     public void TraerPapel()
     {
         if (papelAnim.GetInteger("Accion") == 0)
-        {
-            papelAnim.SetInteger("Accion", 1);
-        }
-        else if (papelAnim.GetInteger("Accion") == 1)
-        {
-            papelAnim.SetInteger("Accion", 2);
-        }
-        else if (papelAnim.GetInteger("Accion") == 2)
         {
             papelAnim.SetInteger("Accion", 1);
         }

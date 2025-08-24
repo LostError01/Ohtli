@@ -3,6 +3,7 @@ using TMPro;
 using System.Collections;
 using Ink.Parsed;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 public class QuickTimeEvent : MonoBehaviour
 {
     // 1. Letras a elegir y la secuencia que las guardara
@@ -16,6 +17,13 @@ public class QuickTimeEvent : MonoBehaviour
     private bool eventoIniciado = false;
     private bool mouseHabilitado = true;
 
+    // 4. Parches para iniciar el evento
+    private int parche = 0;
+
+    // 5. Variables de tiempo
+    private float tiempoLimite = 5f;
+    private bool tiempoAcabado = false;
+
     [Header("Caja de Texto")]
     [SerializeField] private TextMeshProUGUI cajaTexto;
 
@@ -25,11 +33,31 @@ public class QuickTimeEvent : MonoBehaviour
     [Header("Animator Ventana QuickTimeEvent")]
     [SerializeField] private Animator ventanaQTEAnim;
 
+    [Header("Animator Hoja para Recortar")]
+    [SerializeField] private Animator hojaRecortarAnim;
+
+    [Header("Parches de la hoja de repuesto")]
+    [SerializeField] private List<GameObject> parches = new List<GameObject>();
+
+    [Header("Animator de Parches de Repuesto")]
+    [SerializeField] private List<Animator> parchesAnim = new List<Animator>();
+
+    [Header("Parches finales para draggear")]
+    [SerializeField] private List<GameObject> parchesFinales = new List<GameObject>();
+
+
     private void Start()
     {
-        foreach(GameObject pin in pinesLetras)
+        mouseHabilitado = true;
+
+        foreach (GameObject pin in pinesLetras)
         {
             pin.SetActive(false);
+        }
+
+        foreach (GameObject parche in parches)
+        {
+            parche.SetActive(false);
         }
     }
 
@@ -39,19 +67,21 @@ public class QuickTimeEvent : MonoBehaviour
         {
             VerificarTeclas();
             ventanaQTEAnim.SetBool("Ventana",true);
+
+            tiempoLimite -= Time.deltaTime;
+            //Solo ejecutar por 5 segundos
+            if (tiempoLimite <= 0f)
+            {
+                tiempoAcabado = true;
+                cajaTexto.text = "Se ha acabado el tiempo, intentalo de nuevo";
+                //tiempoLimite = 5f;
+                StartCoroutine(Perdiste(2f));
+            }
         }
         if(!eventoIniciado)
         {
             ventanaQTEAnim.SetBool("Ventana",false);
         }
-
-    }
-
-    private void OnMouseDown()
-    {
-        if(mouseHabilitado)
-        GenerarSecuenciaAleatoria();
-        eventoIniciado = true;
     }
 
     // Se genera una secuencia aleatoria de teclas
@@ -86,7 +116,7 @@ public class QuickTimeEvent : MonoBehaviour
     private void CheckearTecla(char teclaPresionada)
     {
         // Si la tecla presionada es igual al elemento actual de la secuencia [pasoActual] = indice
-        if (teclaPresionada == secuencia[pasoActual])
+        if (teclaPresionada == secuencia[pasoActual] && !tiempoAcabado)
         {
             //Activar pin de letra correcta
             pinesLetras[pasoActual].SetActive(true);
@@ -118,13 +148,42 @@ public class QuickTimeEvent : MonoBehaviour
         }
 
         yield return new WaitForSeconds(delay);
+
         eventoIniciado = false; 
         mouseHabilitado = true; 
+        parche = 0;
+        tiempoAcabado = false;
     }
 
     private IEnumerator Ganaste(float delay)
     {
         mouseHabilitado = false;
+
+        if(parche == 1)
+        {
+            parches[0].SetActive(true);
+            parchesAnim[0].SetBool("Recorte",true);
+            parchesFinales[0].SetActive(true);
+        }
+        else if(parche == 2)
+        {
+            parches[1].SetActive(true);
+            parchesAnim[1].SetBool("Recorte",true);
+            parchesFinales[1].SetActive(true);
+        }
+        else if(parche == 3)
+        {
+            parches[2].SetActive(true);
+            parchesAnim[2].SetBool("Recorte",true);
+            parchesFinales[2].SetActive(true);
+        }
+        else if(parche == 4)
+        {
+            parches[3].SetActive(true);
+            parchesAnim[3].SetBool("Recorte",true);
+            parchesFinales[3].SetActive(true);
+        }
+
         yield return new WaitForSeconds(delay);
 
         foreach (GameObject pin in pinesLetras)
@@ -134,5 +193,70 @@ public class QuickTimeEvent : MonoBehaviour
 
         eventoIniciado = false; 
         mouseHabilitado = true; 
+        parche = 0;
+        tiempoAcabado = false;
+    }
+
+    //Evento para botones
+    public void EventoParche1()
+    {
+        tiempoLimite = 5f;
+        if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0)
+        {
+            GenerarSecuenciaAleatoria();
+            parche = 1;
+        }
+        else
+        {
+            return;
+        }
+
+        eventoIniciado = true;
+    }
+
+    public void EventoParche2()
+    {
+        tiempoLimite = 5f;
+        if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0)
+        {
+            GenerarSecuenciaAleatoria();
+            parche = 2;
+        }
+        else
+        {
+            return;
+        }
+
+        eventoIniciado = true;
+    }
+
+    public void EventoParche3()
+    {
+        tiempoLimite = 5f;
+        if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0)
+        {
+            GenerarSecuenciaAleatoria();
+            parche = 3;
+        }
+        else
+        {
+            return;
+        }
+        eventoIniciado = true;
+    }
+
+    public void EventoParche4()
+    {
+        tiempoLimite = 5f;
+        if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0)
+        {
+            GenerarSecuenciaAleatoria();
+            parche = 4;
+        }
+        else
+        {
+            return;
+        }
+        eventoIniciado = true;
     }
 }

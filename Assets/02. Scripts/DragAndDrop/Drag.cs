@@ -16,7 +16,8 @@ public class Drag : MonoBehaviour
     [SerializeField] private int indexObject;
 
     [Header("Aviso por si se quiere hacer drag con luz encendida")]
-    private string avisoLuzEncendida = "No puedes mover los parches con la luz encendida";
+    private string avisoLuzEncendida = "No puedes pegar los parches con la luz encendida.<br>" +
+        "Primero marcalos haciendo click en las roturas y despues apaga la luz";
     [SerializeField] private TextMeshProUGUI avisoText;
     [SerializeField] private Animator avisoAnim;
 
