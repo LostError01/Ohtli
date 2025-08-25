@@ -4,6 +4,7 @@ using System.Collections;
 using Ink.Parsed;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 public class QuickTimeEvent : MonoBehaviour
 {
     // 1. Letras a elegir y la secuencia que las guardara
@@ -16,6 +17,7 @@ public class QuickTimeEvent : MonoBehaviour
     // 3. Banderas para controlar el evento
     private bool eventoIniciado = false;
     private bool mouseHabilitado = true;
+    private bool hasGanado = false;
 
     // 4. Parches para iniciar el evento
     private int parche = 0;
@@ -27,6 +29,10 @@ public class QuickTimeEvent : MonoBehaviour
     [Header("Caja de Texto")]
     [SerializeField] private TextMeshProUGUI cajaTexto;
 
+    [Header("Aviso de traer papel")]
+    [SerializeField] private TextMeshProUGUI avisoTraerPapel;
+    [SerializeField] private Animator avisoTraerPapelAnim;
+
     [Header("Pines de letra apretada correcta")]
     [SerializeField] private List <GameObject> pinesLetras = new List <GameObject>();
 
@@ -35,6 +41,12 @@ public class QuickTimeEvent : MonoBehaviour
 
     [Header("Animator Hoja para Recortar")]
     [SerializeField] private Animator hojaRecortarAnim;
+
+    [Header("Aniamtor Reloj de ventana")]
+    [SerializeField] private Animator relojAnim;
+
+    [Header("Slider de Recortes")]
+    [SerializeField] private Slider sliderRecortes;
 
     [Header("Parches de la hoja de repuesto")]
     [SerializeField] private List<GameObject> parches = new List<GameObject>();
@@ -59,6 +71,9 @@ public class QuickTimeEvent : MonoBehaviour
         {
             parche.SetActive(false);
         }
+
+        sliderRecortes.value = 0;
+        sliderRecortes.maxValue = tiempoLimite;
     }
 
     private void Update()
@@ -67,15 +82,26 @@ public class QuickTimeEvent : MonoBehaviour
         {
             VerificarTeclas();
             ventanaQTEAnim.SetBool("Ventana",true);
+            relojAnim.SetTrigger("Tiempo");
 
             tiempoLimite -= Time.deltaTime;
+
+            sliderRecortes.value = tiempoLimite;
+
             //Solo ejecutar por 5 segundos
-            if (tiempoLimite <= 0f)
+            if (tiempoLimite <= 0f && !hasGanado)
             {
                 tiempoAcabado = true;
                 cajaTexto.text = "Se ha acabado el tiempo, intentalo de nuevo";
-                //tiempoLimite = 5f;
                 StartCoroutine(Perdiste(2f));
+            }
+
+            //Detener el flujo del tiempo si se ha ganado o perdido
+            if (hasGanado || !mouseHabilitado)
+            {
+                tiempoLimite += Time.deltaTime;
+                //Valor en el que se quedo el cronometro
+                sliderRecortes.value = tiempoLimite;
             }
         }
         if(!eventoIniciado)
@@ -158,8 +184,9 @@ public class QuickTimeEvent : MonoBehaviour
     private IEnumerator Ganaste(float delay)
     {
         mouseHabilitado = false;
+        hasGanado = true;
 
-        if(parche == 1)
+        if (parche == 1)
         {
             parches[0].SetActive(true);
             parchesAnim[0].SetBool("Recorte",true);
@@ -195,20 +222,39 @@ public class QuickTimeEvent : MonoBehaviour
         mouseHabilitado = true; 
         parche = 0;
         tiempoAcabado = false;
+        hasGanado = false;
+    }
+
+    private IEnumerator AvisoTraerPapel(float delay)
+    {
+        avisoTraerPapelAnim.SetBool("Start", true);
+        yield return new WaitForSeconds(delay);
+        avisoTraerPapelAnim.SetBool("Start", false);
     }
 
     //Evento para botones
     public void EventoParche1()
     {
         tiempoLimite = 5f;
-        if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0)
+        if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0 && ButtonFunctions.bisturiSeleccionado)
         {
             GenerarSecuenciaAleatoria();
             parche = 1;
         }
         else
         {
-            return;
+            if (!ButtonFunctions.bisturiSeleccionado)
+            {
+                avisoTraerPapel.text = "¡Debes seleccionar el bisturí primero!";
+                StartCoroutine(AvisoTraerPapel(3f));
+                return;
+            }
+            else
+            {
+                avisoTraerPapel.text = "¡Debes traer la hoja primero!";
+                StartCoroutine(AvisoTraerPapel(3f));
+                return;
+            }
         }
 
         eventoIniciado = true;
@@ -224,7 +270,18 @@ public class QuickTimeEvent : MonoBehaviour
         }
         else
         {
-            return;
+            if (!ButtonFunctions.bisturiSeleccionado)
+            {
+                avisoTraerPapel.text = "¡Debes seleccionar el bisturí primero!";
+                StartCoroutine(AvisoTraerPapel(3f));
+                return;
+            }
+            else
+            {
+                avisoTraerPapel.text = "¡Debes traer la hoja primero!";
+                StartCoroutine(AvisoTraerPapel(3f));
+                return;
+            }
         }
 
         eventoIniciado = true;
@@ -240,7 +297,18 @@ public class QuickTimeEvent : MonoBehaviour
         }
         else
         {
-            return;
+            if (!ButtonFunctions.bisturiSeleccionado)
+            {
+                avisoTraerPapel.text = "¡Debes seleccionar el bisturí primero!";
+                StartCoroutine(AvisoTraerPapel(3f));
+                return;
+            }
+            else
+            {
+                avisoTraerPapel.text = "¡Debes traer la hoja primero!";
+                StartCoroutine(AvisoTraerPapel(3f));
+                return;
+            }
         }
         eventoIniciado = true;
     }
@@ -252,10 +320,22 @@ public class QuickTimeEvent : MonoBehaviour
         {
             GenerarSecuenciaAleatoria();
             parche = 4;
+
         }
         else
         {
-            return;
+            if (!ButtonFunctions.bisturiSeleccionado)
+            {
+                avisoTraerPapel.text = "¡Debes seleccionar el bisturí primero!";
+                StartCoroutine(AvisoTraerPapel(3f));
+                return;
+            }
+            else
+            {
+                avisoTraerPapel.text = "¡Debes traer la hoja primero!";
+                StartCoroutine(AvisoTraerPapel(3f));
+                return;
+            }
         }
         eventoIniciado = true;
     }

@@ -18,6 +18,8 @@ public class Drag : MonoBehaviour
     [Header("Aviso por si se quiere hacer drag con luz encendida")]
     private string avisoLuzEncendida = "No puedes pegar los parches con la luz encendida.<br>" +
         "Primero marcalos haciendo click en las roturas y despues apaga la luz";
+    private string avisoSeleccionHerramienta = "No puedes mover los parches con una herramienta seleccionada.<br>" +
+        "Desmarca la herramienta y vuelve a intentarlo";
     [SerializeField] private TextMeshProUGUI avisoText;
     [SerializeField] private Animator avisoAnim;
 
@@ -34,11 +36,20 @@ public class Drag : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if(!ScratchReveal.luzEncendida)
-        transform.position = GetMousePositionInWorld();
+        if (!ScratchReveal.luzEncendida)
+            if (!ButtonFunctions.bisturiSeleccionado && !ButtonFunctions.brochaSeleccionada && !ButtonFunctions.pincelSeleccionado)
+            {
+                transform.position = GetMousePositionInWorld();
+            }
+            else
+            {
+                avisoAnim.SetBool("Start", true);
+                avisoText.text = avisoSeleccionHerramienta;
+                StartCoroutine(StartAnimAfterDelay(3f));
+            }
         else
         {
-            avisoAnim.SetBool("Start",true);
+            avisoAnim.SetBool("Start", true);
             avisoText.text = avisoLuzEncendida;
             StartCoroutine(StartAnimAfterDelay(3f));
         }
