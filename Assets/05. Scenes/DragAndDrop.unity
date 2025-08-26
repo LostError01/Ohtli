@@ -884,6 +884,7 @@ MonoBehaviour:
   - {fileID: 779700542}
   - {fileID: 753857449}
   botonFinal: {fileID: 875922883}
+  botonPeso: {fileID: 1116883226}
   glifo: {fileID: 493677907}
   glifoBtn: {fileID: 33958649}
 --- !u!4 &190453489
@@ -5710,6 +5711,11 @@ MonoBehaviour:
   - {fileID: 374030795}
   - {fileID: 779700542}
   - {fileID: 753857449}
+  botonesRecortes:
+  - {fileID: 847791986}
+  - {fileID: 329865559}
+  - {fileID: 2061760247}
+  - {fileID: 238391587}
 --- !u!60 &1063073580
 PolygonCollider2D:
   m_ObjectHideFlags: 0

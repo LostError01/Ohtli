@@ -53,6 +53,9 @@ public class ButtonFunctions : MonoBehaviour
     [Header("Boton Final")]
     [SerializeField] private Button botonFinal;
 
+    [Header("Boton Peso")]
+    [SerializeField] private Button botonPeso;
+
     [Header("Glifo")]
     [SerializeField] private GameObject glifo;
     [SerializeField] private Button glifoBtn;
@@ -202,6 +205,7 @@ public class ButtonFunctions : MonoBehaviour
 
     private IEnumerator QuitarPeso()
     {
+        botonPeso.gameObject.SetActive(false);
         yield return new WaitForSeconds(5f);
         foreach (GameObject parche in parches)
         {
