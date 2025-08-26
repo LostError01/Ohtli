@@ -970,7 +970,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: 6}
+  m_AnchoredPosition: {x: 29, y: 6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &190453487
@@ -7924,7 +7924,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.83, z: 0}
-  m_LocalScale: {x: 5.557224, y: 4.2747874, z: 4.2747874}
+  m_LocalScale: {x: 33.84689, y: 26.03607, z: 26.03607}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -9220,7 +9220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Finalizar Restauracion
+  m_text: "Finalizar restauraci\xF3n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edf2027932a46fd40bae436639b08cea, type: 2}
   m_sharedMaterial: {fileID: 5083073523514649597, guid: edf2027932a46fd40bae436639b08cea, type: 2}
@@ -9247,7 +9247,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.6
+  m_fontSize: 26.4
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10055,7 +10055,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0111, y: 0, z: 0}
-  m_LocalScale: {x: 53.23464, y: 9.91, z: 1}
+  m_LocalScale: {x: 54.74118, y: 10.190454, z: 1.0283}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
