@@ -58,7 +58,7 @@ public class QuickTimeEvent : MonoBehaviour
     [SerializeField] private List<GameObject> parchesFinales = new List<GameObject>();
 
     [Header("Botones de recortes")]
-    [SerializeField] private List<Button> botonesRecortes = new List<Button>();
+    [SerializeField] private List<GameObject> botonesRecortes = new List<GameObject>();
 
 
     private void Start()
@@ -81,7 +81,6 @@ public class QuickTimeEvent : MonoBehaviour
 
     private void Update()
     {
-
         if (eventoIniciado)
         {
             VerificarTeclas();
@@ -111,10 +110,44 @@ public class QuickTimeEvent : MonoBehaviour
         if(!eventoIniciado)
         {
             ventanaQTEAnim.SetBool("Ventana",false);
-                foreach (Button boton in botonesRecortes)
-                {
-                    boton.interactable = true;
-                }
+        }
+
+        //Si el parches[0] esta activo\
+        if (parches[0].activeSelf)
+        {
+            botonesRecortes[0].SetActive(false);
+        }
+        else if (!parches[0].activeSelf)
+        {
+            botonesRecortes[0].SetActive(true);
+        }
+
+
+        if (parches[1].activeSelf)
+        {
+            botonesRecortes[1].SetActive(false);
+        }
+        else if (!parches[1].activeSelf)
+        {
+            botonesRecortes[1].SetActive(true);
+        }
+
+        if (parches[2].activeSelf)
+        {
+            botonesRecortes[2].SetActive(false);
+        }
+        else if (!parches[2].activeSelf)
+        {
+            botonesRecortes[2].SetActive(true);
+        }
+
+        if (parches[3].activeSelf)
+        {
+            botonesRecortes[3].SetActive(false);
+        }
+        else if (!parches[3].activeSelf)
+        {
+            botonesRecortes[3].SetActive(true);
         }
     }
 
@@ -199,28 +232,24 @@ public class QuickTimeEvent : MonoBehaviour
             parches[0].SetActive(true);
             parchesAnim[0].SetBool("Recorte",true);
             parchesFinales[0].SetActive(true);
-            botonesRecortes[0].interactable = false;
         }
-        else if(parche == 2)
+        if(parche == 2)
         {
             parches[1].SetActive(true);
             parchesAnim[1].SetBool("Recorte",true);
             parchesFinales[1].SetActive(true);
-            botonesRecortes[1].interactable = false;
         }
-        else if(parche == 3)
+        if(parche == 3)
         {
             parches[2].SetActive(true);
             parchesAnim[2].SetBool("Recorte",true);
             parchesFinales[2].SetActive(true);
-            botonesRecortes[2].interactable = false;
         }
-        else if(parche == 4)
+        if(parche == 4)
         {
             parches[3].SetActive(true);
             parchesAnim[3].SetBool("Recorte",true);
             parchesFinales[3].SetActive(true);
-            botonesRecortes[3].interactable = false;
         }
 
         yield return new WaitForSeconds(delay);
@@ -250,10 +279,10 @@ public class QuickTimeEvent : MonoBehaviour
         tiempoLimite = 5f;
         if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0 && ButtonFunctions.bisturiSeleccionado)
         {
-            botonesRecortes[0].interactable = false;
-            botonesRecortes[1].interactable = false;
-            botonesRecortes[2].interactable = false;
-            botonesRecortes[3].interactable = false;
+            botonesRecortes[0].SetActive(false);
+            botonesRecortes[1].SetActive(false);
+            botonesRecortes[2].SetActive(false);
+            botonesRecortes[3].SetActive(false);
             GenerarSecuenciaAleatoria();
             parche = 1;
         }
@@ -281,10 +310,10 @@ public class QuickTimeEvent : MonoBehaviour
         tiempoLimite = 5f;
         if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0 && ButtonFunctions.bisturiSeleccionado)
         {
-            botonesRecortes[0].interactable = false;
-            botonesRecortes[1].interactable = false;
-            botonesRecortes[2].interactable = false;
-            botonesRecortes[3].interactable = false;
+            botonesRecortes[0].SetActive(false);
+            botonesRecortes[1].SetActive(false);
+            botonesRecortes[2].SetActive(false);
+            botonesRecortes[3].SetActive(false);
             GenerarSecuenciaAleatoria();
             parche = 2;
         }
@@ -312,10 +341,10 @@ public class QuickTimeEvent : MonoBehaviour
         tiempoLimite = 5f;
         if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0 && ButtonFunctions.bisturiSeleccionado)
         {
-            botonesRecortes[0].interactable = false;
-            botonesRecortes[1].interactable = false;
-            botonesRecortes[2].interactable = false;
-            botonesRecortes[3].interactable = false;
+            botonesRecortes[0].SetActive(false);
+            botonesRecortes[1].SetActive(false);
+            botonesRecortes[2].SetActive(false);
+            botonesRecortes[3].SetActive(false);
             GenerarSecuenciaAleatoria();
             parche = 3;
         }
@@ -342,10 +371,10 @@ public class QuickTimeEvent : MonoBehaviour
         tiempoLimite = 5f;
         if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0 && ButtonFunctions.bisturiSeleccionado)
         {
-            botonesRecortes[0].interactable = false;
-            botonesRecortes[1].interactable = false;
-            botonesRecortes[2].interactable = false;
-            botonesRecortes[3].interactable = false;
+            botonesRecortes[0].SetActive(false);
+            botonesRecortes[1].SetActive(false);
+            botonesRecortes[2].SetActive(false);
+            botonesRecortes[3].SetActive(false);
             GenerarSecuenciaAleatoria();
             parche = 4;
 
