@@ -185,13 +185,13 @@ public class ScratchReveal : MonoBehaviour
             {
                 hojaLimpiada = true;
                 hojaPapel.enabled = false;
-                avisoTexto.text = "Hoja limpiada,ahora puede marcar las roturas";
+                avisoTexto.text = "Códice limpio,ahora puede marcar las roturas";
                 hojaAnim.SetBool("Limpiar",true);
                 StartCoroutine(MostrarAviso());
             }
             else if (!ButtonFunctions.brochaSeleccionada && hojaPapel.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition)))
             {
-                avisoTexto.text = "Primero necesita limpiar la hoja con la brocha";
+                avisoTexto.text = "Primero necesita limpiar el códice con la brocha";
                 StartCoroutine(MostrarAviso());
             }
         }
