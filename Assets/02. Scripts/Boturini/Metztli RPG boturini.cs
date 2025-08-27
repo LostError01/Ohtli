@@ -35,18 +35,18 @@ public class MetztliRPGboturini : MonoBehaviour
         AnimatorStateInfo stateInfo =
         anim.GetCurrentAnimatorStateInfo(0);
         bool attacking =
-        stateInfo.IsName("MB_Attack"); // tree
-        if (Input.GetKeyDown("space") && !attacking) // comprobación 
+        stateInfo.IsName("MB_Attack"); 
+        if (Input.GetKeyDown("space") && !attacking)
         {
             anim.SetTrigger("Attacking");
         }
         if (mov != Vector2.zero)
             AttackCollider.offset =
-            new Vector2(mov.x / 2, mov.y / 2);// -x -y
+            new Vector2(mov.x / 2, mov.y / 2);
         if (attacking)
         {
             float playbackTime = stateInfo.normalizedTime;
-            if (playbackTime > 0.2 && playbackTime < 0.6) //<<<<
+            if (playbackTime > 0.2 && playbackTime < 0.6) 
             {
                 AttackCollider.enabled = true;
             }
