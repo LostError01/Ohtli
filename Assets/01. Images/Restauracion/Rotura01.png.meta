@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 74e92350a3f1c6b449e8e7e683318e08
+guid: 232883bf5051fd544a68503d2b8f87c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1859298771094378779
-    second: rotura3_0
-  - first:
-      213: -9119219909194462616
-    second: rotura3_1
+      213: -5730578121407802877
+    second: Rotura01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rotura3_0
+      name: Rotura01_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 13
-        width: 41
-        height: 57
+        x: 634
+        y: 1420
+        width: 335
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b19966e916e8dc910800000000000000
-      internalID: 1859298771094378779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rotura3_1
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 64
-        width: 12
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 86a4bcbeec5027180800000000000000
-      internalID: -9119219909194462616
+      spriteID: 302dcdb7f85e870b0800000000000000
+      internalID: -5730578121407802877
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rotura3_0: 1859298771094378779
-      rotura3_1: -9119219909194462616
+      Rotura01_0: -5730578121407802877
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

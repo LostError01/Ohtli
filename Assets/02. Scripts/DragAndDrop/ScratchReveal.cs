@@ -31,11 +31,17 @@ public class ScratchReveal : MonoBehaviour
     //Bandera para ver si ya se limpio la hoja
     private bool hojaLimpiada = false;
 
-    //Roturas del documento
-    private GameObject scratch01;
-    private GameObject scratch02;
-    private GameObject scratch03;
-    private GameObject scratch04;
+    [Header("Roturas Reveladas")]
+    [SerializeField] private GameObject scratch01;
+    [SerializeField] private GameObject scratch02;
+    [SerializeField] private GameObject scratch03;
+    [SerializeField] private GameObject scratch04;
+
+    [Header("Roturas ya marcadas")]
+    [SerializeField] private GameObject scratch01SinMarcar;
+    [SerializeField] private GameObject scratch02SinMarcar;
+    [SerializeField] private GameObject scratch03SinMarcar;
+    [SerializeField] private GameObject scratch04SinMarcar;
 
     //Flag para ver si se ha detectado un clic en Scratch01
     private bool scratch01Clicked = false;
@@ -48,13 +54,6 @@ public class ScratchReveal : MonoBehaviour
 
     private void Start()
     {
-
-        //Encontrar los objetos de rotura del documento con los tags correspondientes
-        scratch01 = GameObject.FindGameObjectWithTag("Scratch01");
-        scratch02 = GameObject.FindGameObjectWithTag("Scratch02");
-        scratch03 = GameObject.FindGameObjectWithTag("Scratch03");
-        scratch04 = GameObject.FindGameObjectWithTag("Scratch04");
-
         //Desactivar los objetos de rotura al inicio
         if (scratch01 != null) scratch01.SetActive(false);
         if (scratch02 != null) scratch02.SetActive(false);
@@ -121,9 +120,10 @@ public class ScratchReveal : MonoBehaviour
                 }
                 else if (!ButtonFunctions.brochaSeleccionada && !ButtonFunctions.bisturiSeleccionado && !ButtonFunctions.pincelSeleccionado)
                 { 
-                scratch01Clicked = true;
-                scratch01.SetActive(true);
-                scratch01.GetComponent<Collider2D>().enabled = false;
+                    scratch01Clicked = true;
+                    scratch01.SetActive(true);
+                    scratch01SinMarcar.SetActive(true);
+                    scratch01.GetComponent<Collider2D>().enabled = false;
                 }
             }
 
@@ -139,6 +139,7 @@ public class ScratchReveal : MonoBehaviour
                 {
                     scratch02Clicked = true;
                     scratch02.SetActive(true);
+                    scratch02SinMarcar.SetActive(true);
                     scratch02.GetComponent<Collider2D>().enabled = false;
                 }
             }
@@ -155,6 +156,7 @@ public class ScratchReveal : MonoBehaviour
                 {
                     scratch03Clicked = true;
                     scratch03.SetActive(true);
+                    scratch03SinMarcar.SetActive(true);
                     scratch03.GetComponent<Collider2D>().enabled = false;
                 }
             }
@@ -171,6 +173,7 @@ public class ScratchReveal : MonoBehaviour
                 {
                     scratch04Clicked = true;
                     scratch04.SetActive(true);
+                    scratch04SinMarcar.SetActive(true);
                     scratch04.GetComponent<Collider2D>().enabled = false;
                 }
             }
@@ -245,7 +248,7 @@ public class ScratchReveal : MonoBehaviour
                 avisoTexto.text = "Parche 1 con pegamento, ahora puede arrastrar el parche";
                 scratch01.GetComponent<Collider2D>().enabled = true;
                 //Cambiar a color dado en rgb
-                scratch01.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.6f, 0.7f);
+                scratch01SinMarcar.GetComponent<SpriteRenderer>().color = new Color(0.3f, 0.6f, 1f);
                 StartCoroutine(MostrarAviso());
         }
         else
@@ -262,7 +265,7 @@ public class ScratchReveal : MonoBehaviour
             botonesPegarParche[1].gameObject.SetActive(false);
             avisoTexto.text = "Parche 2 con pegamento, ahora puede arrastrar el parche";
             scratch02.GetComponent<Collider2D>().enabled = true;
-            scratch02.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.6f, 0.7f);
+            scratch02SinMarcar.GetComponent<SpriteRenderer>().color = new Color(0.3f, 0.6f, 1f);
             StartCoroutine(MostrarAviso());
         }
         else
@@ -279,7 +282,7 @@ public class ScratchReveal : MonoBehaviour
             botonesPegarParche[2].gameObject.SetActive(false);
             avisoTexto.text = "Parche 3 con pegamento, ahora puede arrastrar el parche";
             scratch03.GetComponent<Collider2D>().enabled = true;
-            scratch03.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.6f, 0.7f);
+            scratch03SinMarcar.GetComponent<SpriteRenderer>().color = new Color(0.3f, 0.6f, 1f);
             StartCoroutine(MostrarAviso());
         }
         else
@@ -296,7 +299,7 @@ public class ScratchReveal : MonoBehaviour
             botonesPegarParche[3].gameObject.SetActive(false);
             avisoTexto.text = "Parche 4 con pegamento, ahora puede arrastrar el parche";
             scratch04.GetComponent<Collider2D>().enabled = true;
-            scratch04.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.6f, 0.7f);
+            scratch04SinMarcar.GetComponent<SpriteRenderer>().color = new Color(0.3f, 0.6f, 1f);
             StartCoroutine(MostrarAviso());
         }
         else

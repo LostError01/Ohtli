@@ -60,6 +60,9 @@ public class ButtonFunctions : MonoBehaviour
     [SerializeField] private GameObject glifo;
     [SerializeField] private Button glifoBtn;
 
+    [Header("Animator cronometro")]
+    [SerializeField] private Animator cronometroAnim;
+
     public static bool bisturiSeleccionado = false;
     public static bool brochaSeleccionada = false;
     public static bool pincelSeleccionado = false;
@@ -172,6 +175,7 @@ public class ButtonFunctions : MonoBehaviour
     public void AplicarPeso()
     {
         botonPesoAnim.SetBool("Mostrar", true);
+        cronometroAnim.SetBool("Spawn", true);
         StartCoroutine(QuitarPeso());
     }
 
@@ -212,6 +216,7 @@ public class ButtonFunctions : MonoBehaviour
             parche.SetActive(false);
         }
         botonPesoAnim.SetBool("Mostrar", false);
+        cronometroAnim.SetBool("Spawn", false);
         yield return new WaitForSeconds(0.8f);
         glifo.SetActive(true);
         glifoBtn.enabled = true;
