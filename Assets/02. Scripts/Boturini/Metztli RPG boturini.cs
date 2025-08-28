@@ -8,6 +8,10 @@ public class MetztliRPGboturini : MonoBehaviour
     Vector2 mov;
     CircleCollider2D AttackCollider;//<<<<<<<
 
+    [Header("Script Dialogos Manager")]
+    [SerializeField] private DialogosManager dialogosManager;
+
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -19,6 +23,13 @@ public class MetztliRPGboturini : MonoBehaviour
     }
     void Update()
     {
+        if(dialogosManager.dialogoActivo)
+        {
+            mov = Vector2.zero;
+            anim.SetBool("walking", false);
+            return;
+        }
+
         mov = new Vector2(//WASD diagonales
          Input.GetAxisRaw("Horizontal"),
          Input.GetAxisRaw("Vertical"));
@@ -35,8 +46,9 @@ public class MetztliRPGboturini : MonoBehaviour
         AnimatorStateInfo stateInfo =
         anim.GetCurrentAnimatorStateInfo(0);
         bool attacking =
-        stateInfo.IsName("MB_Attack"); 
-        if (Input.GetKeyDown("space") && !attacking)
+        stateInfo.IsName("MB_Attack");
+        // Ataque con espacio
+        if (Input.GetMouseButtonDown(1) && !attacking)
         {
             anim.SetTrigger("Attacking");
         }
@@ -46,6 +58,8 @@ public class MetztliRPGboturini : MonoBehaviour
         if (attacking)
         {
             float playbackTime = stateInfo.normalizedTime;
+            //Mientras se esta atacando no se puede mover
+            mov = Vector2.zero;
             if (playbackTime > 0.2 && playbackTime < 0.6) 
             {
                 AttackCollider.enabled = true;

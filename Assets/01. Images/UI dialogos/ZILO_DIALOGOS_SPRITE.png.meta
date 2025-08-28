@@ -223,7 +223,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ZILO_DIALOGOS_SPRITE_0: -7164927124993540965
+      ZILO_DIALOGOS_SPRITE_1: 7793393863898896586
+      ZILO_DIALOGOS_SPRITE_2: 4001413062944790215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

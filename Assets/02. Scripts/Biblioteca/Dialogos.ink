@@ -1,18 +1,16 @@
--> NPC01
+-> Jose01
 
-=== NPC01 ===
-Hola aventurero!
-Podrias ayudarme con una mision importante...Solo cuento contigo para esta tarea
-    * [Si]
-    -> Si
-    * [Ahora no]
-    -> No
--> END
+=== Jose01 ===
+¡Que raro! No pude encontrar las herramientas para la restauración del códice. 
+Parece que desaparecieron
+-> Metztli01
 
-=== Si ===
-Excelente, cuento con tu ayuda!
--> END
+=== Metztli01 ===
+¿Cómo que desaparecieron? 
+->Jose02
 
-=== No ===
-Okay, por favor dime si cambias de opinion.
--> END
+=== Jose02 ===
+Ayer estaban en su lugar, ayúdame a buscarlas por favor. 
+Algo raro está pasando. Cuando las encuentres, te veo en la sala de restauración. 
+->END
+

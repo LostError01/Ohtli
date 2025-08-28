@@ -223,7 +223,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DIOS_DIALOGOS_SPRITE(1)_0: -1643854093918020964
+      DIOS_DIALOGOS_SPRITE(1)_1: 8487536136487798113
+      DIOS_DIALOGOS_SPRITE(1)_2: 1589268499840802823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
