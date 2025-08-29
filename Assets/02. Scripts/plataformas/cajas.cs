@@ -14,6 +14,9 @@ public class cajas : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<Collider2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+
+        //Freezear la posicion en X
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
     }
 
     void FixedUpdate()
@@ -31,7 +34,10 @@ public class cajas : MonoBehaviour
                
                 float dir = Mathf.Sign(player.transform.position.x - transform.position.x);
 
-            
+                //Quitar el freeze en X para poder mover la caja
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+
                 rb.linearVelocity = new Vector2(-dir * pushSpeed, rb.linearVelocity.y);
                 return;
             }

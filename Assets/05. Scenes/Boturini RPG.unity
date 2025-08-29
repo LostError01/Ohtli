@@ -13794,6 +13794,8 @@ MonoBehaviour:
   dialogoAnimator: {fileID: 59922443}
   mobilePJ2: {fileID: 1449924841}
   JoseImg: {fileID: 1992603105}
+  PJ1Animator: {fileID: 0}
+  mobilePJ2Animator: {fileID: 0}
   MetztliImg: {fileID: 234027441}
 --- !u!58 &1112208248
 CircleCollider2D:
@@ -16654,6 +16656,8 @@ MonoBehaviour:
   dialogoAnimator: {fileID: 59922443}
   mobilePJ2: {fileID: 1449924841}
   JoseImg: {fileID: 1992603105}
+  PJ1Animator: {fileID: 234027440}
+  mobilePJ2Animator: {fileID: 1992603104}
   MetztliImg: {fileID: 234027441}
 --- !u!61 &1423086035
 BoxCollider2D:
@@ -16908,6 +16912,8 @@ MonoBehaviour:
   dialogoAnimator: {fileID: 59922443}
   mobilePJ2: {fileID: 827539095}
   JoseImg: {fileID: 1992603105}
+  PJ1Animator: {fileID: 0}
+  mobilePJ2Animator: {fileID: 0}
   MetztliImg: {fileID: 234027441}
 --- !u!61 &1427584929
 BoxCollider2D:
@@ -18892,6 +18898,8 @@ MonoBehaviour:
   dialogoAnimator: {fileID: 59922443}
   mobilePJ2: {fileID: 1280432095}
   JoseImg: {fileID: 1992603105}
+  PJ1Animator: {fileID: 0}
+  mobilePJ2Animator: {fileID: 0}
   MetztliImg: {fileID: 234027441}
 --- !u!61 &1477006950
 BoxCollider2D:

@@ -22,6 +22,9 @@ public class MetztliPlayerPlat : MonoBehaviour
     public float wallSlideSpeed = 1.5f;  // velocidad de deslizamiento
     private bool isWallSliding;
 
+    [Header("Script de DialogosManager")]
+    [SerializeField] private DialogosManager dialogosManager;
+
     void Start()
     {
         PlayerRB = GetComponent<Rigidbody2D>();
@@ -48,6 +51,12 @@ public class MetztliPlayerPlat : MonoBehaviour
         // ✅ Si hay pared y el jugador intenta avanzar hacia ella
         if ((h > 0 && isWall && transform.localScale.x > 0) ||
             (h < 0 && isWall && transform.localScale.x < 0))
+        {
+            h = 0;
+        }
+
+        // Si el diálogo está activo, el jugador no puede moverse
+        if (dialogosManager != null && dialogosManager.dialogoActivo)
         {
             h = 0;
         }
@@ -114,11 +123,18 @@ public class MetztliPlayerPlat : MonoBehaviour
     void PlayerJump()
     {
         // ✅ Salto normal (sin wall jump)
-        if (isGround && Input.GetKeyDown(KeyCode.Space))
+        if (isGround && Input.GetKeyDown(KeyCode.W))
         {
-            jumped = true;
-            PlayerRB.linearVelocity = new Vector2(PlayerRB.linearVelocity.x, jumpPower);
-            Panim.SetTrigger("Jump");
+            if (dialogosManager.dialogoActivo)
+            {
+                return; // No saltar si el diálogo está activo
+            }
+            else
+            {
+                jumped = true;
+                PlayerRB.linearVelocity = new Vector2(PlayerRB.linearVelocity.x, jumpPower);
+                Panim.SetTrigger("Jump");
+            }
         }
     }
 }
