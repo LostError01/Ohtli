@@ -29,7 +29,7 @@ public class cajas : MonoBehaviour
         if (distance <= pushDistance)
         {
             
-            if (Input.GetKey(KeyCode.M))
+            if (Input.GetMouseButton(1))
             {
                
                 float dir = Mathf.Sign(player.transform.position.x - transform.position.x);

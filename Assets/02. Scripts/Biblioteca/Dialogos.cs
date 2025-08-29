@@ -10,6 +10,7 @@ public class Dialogos : MonoBehaviour
 {
     [Header("Archivo de Ink (Dialogo)")]
     [SerializeField] private TextAsset inkJSON;
+    [SerializeField] private TextAsset inkJSON2;
 
     [Header("Script de Dialogo que se quiere modificar")]
     [SerializeField] private DialogosManager dialogosManager;
@@ -42,6 +43,16 @@ public class Dialogos : MonoBehaviour
     private Animator chapulinAnimator;
 
     private bool aguilaTeclaE = false;
+
+    //VARIABLES DE CONTROL DE ANIMALES
+    private bool flagSerpiente = false;
+    private bool flagPez = false;
+    private bool flagChapulin = false;
+    private bool flagPavo = false;
+
+    private bool flagArana = false;
+    private bool flagSerpiente01 = false;
+    private bool flagChapulin01 = false;
 
     private void Start()
     {
@@ -405,11 +416,21 @@ public class Dialogos : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                dialogoAnimator.SetBool("MostrarDialogo", true);
-                JoseImg.enabled = false;
-                MetztliImg.enabled = false;
-                DialogosManager.GetInstance().IniciarDialogo(inkJSON);
-                aguilaTeclaE = true;
+                if (flagChapulin && flagPavo && flagPez && flagSerpiente)
+                {
+                    dialogoAnimator.SetBool("MostrarDialogo", true);
+                    JoseImg.enabled = false;
+                    MetztliImg.enabled = false;
+                    DialogosManager.GetInstance().IniciarDialogo(inkJSON);
+                    aguilaTeclaE = true;
+                }
+                else
+                {
+                    dialogoAnimator.SetBool("MostrarDialogo", true);
+                    JoseImg.enabled = false;
+                    MetztliImg.enabled = false;
+                    DialogosManager.GetInstance().IniciarDialogo(inkJSON2);
+                }
             }
 
             if (!dialogosManager.dialogoActivo && aguilaTeclaE)
@@ -526,6 +547,7 @@ public class Dialogos : MonoBehaviour
 
     IEnumerator Serpiente()
     {
+        flagSerpiente01 = true;
         //Encontrar gameobject de la serpiente y extraer su animator
         GameObject serpiente = GameObject.Find("Serpiente_01");
         serpienteAnimator = serpiente.GetComponent<Animator>();
@@ -540,6 +562,7 @@ public class Dialogos : MonoBehaviour
 
     IEnumerator Arana()
     {
+        flagArana = true;
         GameObject arana = GameObject.Find("Arana_01");
         aranaAnimator = arana.GetComponent<Animator>();
         this.GetComponent<Collider2D>().enabled = false;
@@ -553,6 +576,7 @@ public class Dialogos : MonoBehaviour
 
     IEnumerator Chapulin()
     {
+        flagChapulin01 = true;
         GameObject chapulin = GameObject.Find("Chapulin_01");
         aranaAnimator = chapulin.GetComponent<Animator>();
         this.GetComponent<Collider2D>().enabled = false;
@@ -567,6 +591,7 @@ public class Dialogos : MonoBehaviour
     IEnumerator Serpiente02()
     {
         //Encontrar gameobject de la serpiente y extraer su animator
+        flagSerpiente = true;
         GameObject serpiente = GameObject.Find("vibora");
         this.GetComponent<Collider2D>().enabled = false;
         serpienteAnimator = serpiente.GetComponent<Animator>();
@@ -580,6 +605,7 @@ public class Dialogos : MonoBehaviour
 
     IEnumerator Chapulin02()
     {
+        flagChapulin = true;
         GameObject chapulin = GameObject.Find("chapulin02");
         this.GetComponent<Collider2D>().enabled = false;
         chapulinAnimator = chapulin.GetComponent<Animator>();
@@ -593,6 +619,7 @@ public class Dialogos : MonoBehaviour
 
     IEnumerator Pez()
     {
+        flagPez = true;
         GameObject chapulin = GameObject.Find("pez");
         this.GetComponent<Collider2D>().enabled = false;
         chapulinAnimator = chapulin.GetComponent<Animator>();
@@ -606,6 +633,7 @@ public class Dialogos : MonoBehaviour
 
     IEnumerator Pavo()
     {
+        flagPavo = true;
         GameObject chapulin = GameObject.Find("pavo");
         this.GetComponent<Collider2D>().enabled = false;
         chapulinAnimator = chapulin.GetComponent<Animator>();

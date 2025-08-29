@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Ink.Parsed;
+using UnityEngine;
+using System.Collections.Generic;
 
 public class MetztliPlayerPlat : MonoBehaviour
 {
@@ -25,10 +27,20 @@ public class MetztliPlayerPlat : MonoBehaviour
     [Header("Script de DialogosManager")]
     [SerializeField] private DialogosManager dialogosManager;
 
+    [Header("Checkpoints")]
+    [SerializeField] private List<Transform> checkpoints;
+
+    private bool[] checkpointsArrays = new bool[6];
+
     void Start()
     {
         PlayerRB = GetComponent<Rigidbody2D>();
         Panim = GetComponent<Animator>();
+
+        for (int i=0; i<6; i++)
+        {
+                       checkpointsArrays[i] = false;
+        }
     }
 
     void Update()
@@ -135,6 +147,55 @@ public class MetztliPlayerPlat : MonoBehaviour
                 PlayerRB.linearVelocity = new Vector2(PlayerRB.linearVelocity.x, jumpPower);
                 Panim.SetTrigger("Jump");
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Void") && checkpointsArrays[0])
+        {
+            transform.position = checkpoints[0].position;
+        }
+
+        if (collision.CompareTag("Void") && checkpointsArrays[1])
+        {
+            transform.position = checkpoints[1].position;
+        }
+
+        if (collision.CompareTag("Void") && checkpointsArrays[2])
+        {
+            transform.position = checkpoints[2].position;
+        }
+
+        if (collision.CompareTag("Void") && checkpointsArrays[3])
+        {
+            transform.position = checkpoints[3].position;
+        }
+
+        if (collision.CompareTag("Checkpoint01"))
+        {
+            checkpointsArrays[0] = true;
+        }
+
+        if (collision.CompareTag("Checkpoint02"))
+        {
+            checkpointsArrays[0] = false;
+            checkpointsArrays[1] = true;
+        }
+
+        if (collision.CompareTag("Checkpoint03"))
+        {
+            checkpointsArrays[0] = false;
+            checkpointsArrays[1] = false;
+            checkpointsArrays[2] = true;
+        }
+
+        if (collision.CompareTag("Checkpoint04"))
+        {
+            checkpointsArrays[0] = false;
+            checkpointsArrays[1] = false;
+            checkpointsArrays[2] = false;
+            checkpointsArrays[3] = true;
         }
     }
 }
