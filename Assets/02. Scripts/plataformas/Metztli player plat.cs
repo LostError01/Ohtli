@@ -123,7 +123,7 @@ public class MetztliPlayerPlat : MonoBehaviour
     void PlayerJump()
     {
         // ✅ Salto normal (sin wall jump)
-        if (isGround && Input.GetKeyDown(KeyCode.W))
+        if (isGround && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
         {
             if (dialogosManager.dialogoActivo)
             {
