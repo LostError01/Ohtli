@@ -4081,6 +4081,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1335665632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &315993805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 315993807}
+  - component: {fileID: 315993806}
+  m_Layer: 0
+  m_Name: Mesa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &315993806
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315993805}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1c5ba48e51597f44d8e9997c3afbe74e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &315993807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315993805}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 72.619, y: 0, z: 0}
+  m_LocalScale: {x: 194.42467, y: 49.187813, z: 49.187813}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &316596324
 GameObject:
   m_ObjectHideFlags: 0
@@ -9933,7 +10020,6 @@ GameObject:
   - component: {fileID: 804683294}
   - component: {fileID: 804683297}
   - component: {fileID: 804683293}
-  - component: {fileID: 804683298}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10073,38 +10159,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Follow: {fileID: 1022891417}
   MoveSpeed: 3
---- !u!114 &804683298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804683292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowDebugText: 0
-  ShowCameraFrustum: 1
-  IgnoreTimeScale: 0
-  WorldUpOverride: {fileID: 0}
-  ChannelMask: -1
-  UpdateMethod: 2
-  BlendUpdateMethod: 1
-  LensModeOverride:
-    Enabled: 0
-    DefaultMode: 2
-  DefaultBlend:
-    Style: 1
-    Time: 2
-    CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  CustomBlends: {fileID: 0}
 --- !u!1 &827539092
 GameObject:
   m_ObjectHideFlags: 0
@@ -13785,10 +13839,10 @@ MonoBehaviour:
   dialogosManager: {fileID: 1005530002}
   dialogoAnimator: {fileID: 59922443}
   mobilePJ2: {fileID: 1449924841}
+  MetztliImg: {fileID: 234027441}
   JoseImg: {fileID: 1992603105}
   PJ1Animator: {fileID: 0}
   mobilePJ2Animator: {fileID: 0}
-  MetztliImg: {fileID: 234027441}
 --- !u!58 &1112208248
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16647,10 +16701,10 @@ MonoBehaviour:
   dialogosManager: {fileID: 1005530002}
   dialogoAnimator: {fileID: 59922443}
   mobilePJ2: {fileID: 1449924841}
+  MetztliImg: {fileID: 234027441}
   JoseImg: {fileID: 1992603105}
   PJ1Animator: {fileID: 234027440}
   mobilePJ2Animator: {fileID: 1992603104}
-  MetztliImg: {fileID: 234027441}
 --- !u!61 &1423086035
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16903,10 +16957,10 @@ MonoBehaviour:
   dialogosManager: {fileID: 1005530002}
   dialogoAnimator: {fileID: 59922443}
   mobilePJ2: {fileID: 827539095}
+  MetztliImg: {fileID: 234027441}
   JoseImg: {fileID: 1992603105}
   PJ1Animator: {fileID: 0}
   mobilePJ2Animator: {fileID: 0}
-  MetztliImg: {fileID: 234027441}
 --- !u!61 &1427584929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18836,10 +18890,10 @@ MonoBehaviour:
   dialogosManager: {fileID: 1005530002}
   dialogoAnimator: {fileID: 59922443}
   mobilePJ2: {fileID: 1280432095}
+  MetztliImg: {fileID: 234027441}
   JoseImg: {fileID: 1992603105}
   PJ1Animator: {fileID: 0}
   mobilePJ2Animator: {fileID: 0}
-  MetztliImg: {fileID: 234027441}
 --- !u!61 &1477006950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29695,3 +29749,4 @@ SceneRoots:
   - {fileID: 2024685897}
   - {fileID: 1005530003}
   - {fileID: 238680738}
+  - {fileID: 315993807}
