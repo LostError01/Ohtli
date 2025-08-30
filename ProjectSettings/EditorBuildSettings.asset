@@ -74,6 +74,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/05. Scenes/creditosNew.unity
     guid: 5d6bbc3d2c3a0644180133a7934eb9c8
+  - enabled: 1
+    path: Assets/05. Scenes/E1.unity
+    guid: f6cff752309c1bb49a3755dd43623b81
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
