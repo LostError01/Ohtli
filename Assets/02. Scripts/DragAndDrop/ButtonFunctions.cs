@@ -67,6 +67,7 @@ public class ButtonFunctions : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip botonAudio;
     [SerializeField] private AudioClip herramientaAudio;
+    [SerializeField] private AudioClip relojAudio;
 
     public static bool bisturiSeleccionado = false;
     public static bool brochaSeleccionada = false;
@@ -237,12 +238,14 @@ public class ButtonFunctions : MonoBehaviour
 
     private IEnumerator QuitarPeso()
     {
+        audioSource.PlayOneShot(relojAudio);
         botonPeso.gameObject.SetActive(false);
         yield return new WaitForSeconds(5f);
         foreach (GameObject parche in parches)
         {
             parche.SetActive(false);
         }
+        audioSource.Stop();
         botonPesoAnim.SetBool("Mostrar", false);
         cronometroAnim.SetBool("Spawn", false);
         yield return new WaitForSeconds(0.8f);
