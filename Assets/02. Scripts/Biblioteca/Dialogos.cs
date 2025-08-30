@@ -82,7 +82,7 @@ public class Dialogos : MonoBehaviour
             {
                 JoseImg.enabled = false;
                 MetztliImg.enabled = true;
-    
+
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Right;
             }
             if (dialogosManager.parrafoActual == 5)
@@ -105,6 +105,12 @@ public class Dialogos : MonoBehaviour
                 MetztliImg.enabled = false;
 
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
+            }
+
+            //Acabar el dialogo
+            if(dialogosManager.parrafoActual == 10)
+            {
+                SceneManager.LoadScene("E1");
             }
         }
 
