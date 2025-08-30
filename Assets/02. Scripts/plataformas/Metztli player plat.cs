@@ -24,8 +24,7 @@ public class MetztliPlayerPlat : MonoBehaviour
     public float wallSlideSpeed = 1.5f;  // velocidad de deslizamiento
     private bool isWallSliding;
 
-    [Header("Script de DialogosManager")]
-    [SerializeField] private DialogosManager dialogosManager;
+   
 
     [Header("Checkpoints")]
     [SerializeField] private List<Transform> checkpoints;
@@ -67,11 +66,7 @@ public class MetztliPlayerPlat : MonoBehaviour
             h = 0;
         }
 
-        // Si el diálogo está activo, el jugador no puede moverse
-        if (dialogosManager != null && dialogosManager.dialogoActivo)
-        {
-            h = 0;
-        }
+        
 
         // ✅ Si toca la pared por primera vez, micro desplazamiento anti-stick
         if (isWall && !wasWall)
@@ -136,19 +131,16 @@ public class MetztliPlayerPlat : MonoBehaviour
     {
         // ✅ Salto normal (sin wall jump)
         if (isGround && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
-        {
-            if (dialogosManager.dialogoActivo)
-            {
-                return; // No saltar si el diálogo está activo
-            }
-            else
+        
+           
+         
             {
                 jumped = true;
                 PlayerRB.linearVelocity = new Vector2(PlayerRB.linearVelocity.x, jumpPower);
                 Panim.SetTrigger("Jump");
             }
         }
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
