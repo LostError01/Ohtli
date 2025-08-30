@@ -19,7 +19,7 @@ public class DialogosManager : MonoBehaviour
     [SerializeField] private AudioClip avanzarDialogoAudio;
 
     //Historia actual que se esta leyendo
-    private Story historiaActual;
+    public Story historiaActual;
 
     //Parrafo actual
     public int parrafoActual = 0;
