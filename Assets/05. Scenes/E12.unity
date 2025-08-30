@@ -291,7 +291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 577, y: -281}
+  m_AnchoredPosition: {x: 503, y: -212}
   m_SizeDelta: {x: 90, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &91231436
@@ -347,7 +347,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: instMemorama
+          m_StringArgument: instMendozaPlat
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &91231437
@@ -770,7 +770,7 @@ RectTransform:
   m_GameObject: {fileID: 1549683263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0167062, y: 1.028003, z: 1.0269759}
+  m_LocalScale: {x: 1.0104557, y: 1.021683, z: 1.0206622}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 173375977}
@@ -800,7 +800,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 762e67eb7a3030845986e4d84549d812, type: 3}
+  m_Texture: {fileID: 2800000, guid: 2731313cda592f144a1abef2171b2257, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
