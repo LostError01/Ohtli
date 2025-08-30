@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ROSTRO_ANGEL_0: 938968251476633433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

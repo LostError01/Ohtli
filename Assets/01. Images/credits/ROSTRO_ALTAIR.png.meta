@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ROSTRO_ALTAIR_0: 5137024314487765538
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

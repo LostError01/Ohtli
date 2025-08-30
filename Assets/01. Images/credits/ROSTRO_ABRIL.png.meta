@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ROSTRO_ABRIL_0: 8971321611286561184
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

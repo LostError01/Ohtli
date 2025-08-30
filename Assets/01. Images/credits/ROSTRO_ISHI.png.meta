@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ROSTRO_ISHI_0: 5606031848114424269
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

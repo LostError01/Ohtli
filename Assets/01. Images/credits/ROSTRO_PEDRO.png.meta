@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ROSTRO_PEDRO_0: -5133588320044908468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
