@@ -71,7 +71,7 @@ public class PlayerMetzBiblio : MonoBehaviour
     {
         if(collision.CompareTag("Teleport") && SceneManager.GetActiveScene().name == "zonarestauracion")
         {
-           SceneManager.LoadScene("E1"); //Debe mandar a E3 cuando este lista
+           SceneManager.LoadScene("E3"); //Debe mandar a E3 cuando este lista
         }
 
         if(collision.CompareTag("Herramienta") && SceneManager.GetActiveScene().name == "biblioteca")

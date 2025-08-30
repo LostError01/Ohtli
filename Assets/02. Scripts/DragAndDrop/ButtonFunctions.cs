@@ -208,7 +208,7 @@ public class ButtonFunctions : MonoBehaviour
 
     public void ComenzarAventura()
     {
-        SceneManager.LoadScene("E1");
+        SceneManager.LoadScene("E4");
 
         audioSource.PlayOneShot(herramientaAudio);
     }

@@ -113,7 +113,7 @@ public class juego : MonoBehaviour
     }
     private void ganar()
     {
-        SceneManager.LoadScene("E1");
+        SceneManager.LoadScene("E9");
     }
 
 }

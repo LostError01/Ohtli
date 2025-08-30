@@ -15,7 +15,7 @@ public class LevelChange : MonoBehaviour
             finalBlocks[3].IsDestroyed() && finalBlocks[4].IsDestroyed() && finalBlocks[5].IsDestroyed() &&
             finalBlocks[6].IsDestroyed() && Dialogos.animalesContador == 3)
             {
-                SceneManager.LoadScene("E1");
+                SceneManager.LoadScene("E8 B");
             }
     }
 }

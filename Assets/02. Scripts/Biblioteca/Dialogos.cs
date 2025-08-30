@@ -110,7 +110,7 @@ public class Dialogos : MonoBehaviour
             //Acabar el dialogo
             if(dialogosManager.parrafoActual == 10)
             {
-                SceneManager.LoadScene("E1");
+                SceneManager.LoadScene("E2");
             }
         }
 
@@ -222,7 +222,7 @@ public class Dialogos : MonoBehaviour
 
             if(dialogosManager.parrafoActual == 11)
             {
-                SceneManager.LoadScene("E1");
+                SceneManager.LoadScene("E6");
             }
         }
 
@@ -439,7 +439,7 @@ public class Dialogos : MonoBehaviour
 
             if(dialogosManager.parrafoActual == 28)
             {
-                SceneManager.LoadScene("E1");
+                SceneManager.LoadScene("E14");
             }
         }
 
@@ -474,7 +474,7 @@ public class Dialogos : MonoBehaviour
 
             if(dialogosManager.parrafoActual == 8)
             {
-                SceneManager.LoadScene("E1");
+                SceneManager.LoadScene("E15");
             }
         }
     }
@@ -677,6 +677,6 @@ public class Dialogos : MonoBehaviour
     IEnumerator Aguila()
     {
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("E1");
+        SceneManager.LoadScene("E13");
     }
 }

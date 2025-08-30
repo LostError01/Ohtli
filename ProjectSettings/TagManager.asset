@@ -24,6 +24,8 @@ TagManager:
   - NPC01
   - Teleport
   - Herramienta
+  - Herramienta2
+  - Herramienta3
   layers:
   - Default
   - TransparentFX
