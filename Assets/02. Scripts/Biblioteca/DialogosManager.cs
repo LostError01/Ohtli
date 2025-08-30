@@ -14,6 +14,10 @@ public class DialogosManager : MonoBehaviour
     [Header("Dialogo Animator")]
     [SerializeField] private Animator dialogoAnimator;
 
+    [Header("Elementos de audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip avanzarDialogoAudio;
+
     //Historia actual que se esta leyendo
     private Story historiaActual;
 
@@ -57,11 +61,13 @@ public class DialogosManager : MonoBehaviour
             ContinuarHistoria();
             parrafoActual++;
             Debug.Log("Parrafo actual: " + parrafoActual);
+            audioSource.PlayOneShot(avanzarDialogoAudio);
         }
     }
 
     public void IniciarDialogo(TextAsset inkJSON)
     {
+        audioSource.PlayOneShot(avanzarDialogoAudio);
         parrafoActual = 0;
         historiaActual = new Story(inkJSON.text);
         dialogoActivo = true;

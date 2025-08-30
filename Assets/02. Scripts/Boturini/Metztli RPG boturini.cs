@@ -11,6 +11,10 @@ public class MetztliRPGboturini : MonoBehaviour
     [Header("Script Dialogos Manager")]
     [SerializeField] private DialogosManager dialogosManager;
 
+    [Header("Elementos de Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip ataqueAudio;
+
 
     void Start()
     {
@@ -51,6 +55,7 @@ public class MetztliRPGboturini : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && !attacking)
         {
             anim.SetTrigger("Attacking");
+            audioSource.PlayOneShot(ataqueAudio);
         }
         if (mov != Vector2.zero)
             AttackCollider.offset =
