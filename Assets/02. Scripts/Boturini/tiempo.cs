@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class tiempo : MonoBehaviour
 {
     public Text contador;
@@ -18,8 +19,8 @@ public class tiempo : MonoBehaviour
         segundos -= Time.deltaTime;
         if(segundos <= 0 ) {
             if( minutos ==0 ) {
-                return;
-                 }
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
             else {
                 segundos = 59;
             minutos -= 1;
@@ -28,7 +29,7 @@ public class tiempo : MonoBehaviour
         letreto(); 
         if(segundos < 0 &&  minutos < 1 ) {
             contador.color = rojo;
-           }
+        }
     }
     public void letreto()
     {
