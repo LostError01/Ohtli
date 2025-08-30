@@ -5,6 +5,7 @@ using System.Collections;
 using Ink.Runtime;
 using System;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Dialogos : MonoBehaviour
 {
@@ -45,14 +46,7 @@ public class Dialogos : MonoBehaviour
     private bool aguilaTeclaE = false;
 
     //VARIABLES DE CONTROL DE ANIMALES
-    private bool flagSerpiente = false;
-    private bool flagPez = false;
-    private bool flagChapulin = false;
-    private bool flagPavo = false;
-
-    private bool flagArana = false;
-    private bool flagSerpiente01 = false;
-    private bool flagChapulin01 = false;
+    private static int animalesContador = 0;
 
     private void Start()
     {
@@ -61,10 +55,18 @@ public class Dialogos : MonoBehaviour
             MetztliImg.enabled = false;
             JoseImg.enabled = true;
         }
+
+        animalesContador = 0;
     }
 
     private void Update()
     {
+        if (animalesContador == 3 && SceneManager.GetActiveScene().name == "Boturini RPG")
+        {
+            Debug.Log("Ganaste con la cantida de animales: " + animalesContador);
+        }
+
+
         //Lobby
         if (playerInTrigger && this.gameObject.name == "JoseLobbyArea")
         {
@@ -354,13 +356,13 @@ public class Dialogos : MonoBehaviour
             }
         }
 
-        // Aguila
+        //Dialogo Aguila
 
         if (playerInTrigger && this.gameObject.name == "DialogAguila")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (flagChapulin && flagPavo && flagPez && flagSerpiente)
+                if (animalesContador == 4)
                 {
                     dialogoAnimator.SetBool("MostrarDialogo", true);
                     JoseImg.enabled = false;
@@ -477,7 +479,6 @@ public class Dialogos : MonoBehaviour
 
     IEnumerator Serpiente()
     {
-        flagSerpiente01 = true;
         //Encontrar gameobject de la serpiente y extraer su animator
         GameObject serpiente = GameObject.Find("Serpiente_01");
         serpienteAnimator = serpiente.GetComponent<Animator>();
@@ -488,11 +489,22 @@ public class Dialogos : MonoBehaviour
         yield return new WaitForSeconds(2f);
         dialogoAnimator.SetBool("MostrarDialogo", true);
         DialogosManager.GetInstance().IniciarDialogo(inkJSON);
+
+        // Esperar a que el diálogo termine antes de sumar
+        while (dialogosManager.dialogoActivo)
+        {
+            yield return null;
+        }
+
+        // Incrementar contador solo si aún no ha sido contado
+        if (animalesContador < 3)
+        {
+            animalesContador++;
+        }
     }
 
     IEnumerator Arana()
     {
-        flagArana = true;
         GameObject arana = GameObject.Find("Arana_01");
         aranaAnimator = arana.GetComponent<Animator>();
         this.GetComponent<Collider2D>().enabled = false;
@@ -502,11 +514,22 @@ public class Dialogos : MonoBehaviour
         yield return new WaitForSeconds(2f);
         dialogoAnimator.SetBool("MostrarDialogo", true);
         DialogosManager.GetInstance().IniciarDialogo(inkJSON);
+
+        // Esperar a que el diálogo termine antes de sumar
+        while (dialogosManager.dialogoActivo)
+        {
+            yield return null;
+        }
+
+        // Incrementar contador solo si aún no ha sido contado
+        if (animalesContador < 3)
+        {
+            animalesContador++;
+        }
     }
 
     IEnumerator Chapulin()
     {
-        flagChapulin01 = true;
         GameObject chapulin = GameObject.Find("Chapulin_01");
         aranaAnimator = chapulin.GetComponent<Animator>();
         this.GetComponent<Collider2D>().enabled = false;
@@ -516,62 +539,116 @@ public class Dialogos : MonoBehaviour
         yield return new WaitForSeconds(2f);
         dialogoAnimator.SetBool("MostrarDialogo", true);
         DialogosManager.GetInstance().IniciarDialogo(inkJSON);
+
+        // Esperar a que el diálogo termine antes de sumar
+        while (dialogosManager.dialogoActivo)
+        {
+            yield return null;
+        }
+
+        // Incrementar contador solo si aún no ha sido contado
+        if (animalesContador < 3)
+        {
+            animalesContador++;
+        }
     }
+
+    /// VERSION DE MENDOZA
 
     IEnumerator Serpiente02()
     {
-        //Encontrar gameobject de la serpiente y extraer su animator
-        flagSerpiente = true;
         GameObject serpiente = GameObject.Find("vibora");
-        this.GetComponent<Collider2D>().enabled = false;
         serpienteAnimator = serpiente.GetComponent<Animator>();
+        this.GetComponent<Collider2D>().enabled = false; // Evita repetir
         serpienteAnimator.SetBool("Desaparecer", true);
         JoseImg.enabled = false;
         MetztliImg.enabled = false;
         yield return new WaitForSeconds(2f);
         dialogoAnimator.SetBool("MostrarDialogo", true);
         DialogosManager.GetInstance().IniciarDialogo(inkJSON);
+
+        // Esperar a que el diálogo termine antes de sumar
+        while (dialogosManager.dialogoActivo)
+        {
+            yield return null;
+        }
+
+        // Incrementar contador solo si aún no ha sido contado
+        if (animalesContador < 4)
+        {
+            animalesContador++;
+        }
     }
 
     IEnumerator Chapulin02()
     {
-        flagChapulin = true;
         GameObject chapulin = GameObject.Find("chapulin02");
-        this.GetComponent<Collider2D>().enabled = false;
         chapulinAnimator = chapulin.GetComponent<Animator>();
+        this.GetComponent<Collider2D>().enabled = false;
         chapulinAnimator.SetBool("Desaparecer", true);
         JoseImg.enabled = false;
         MetztliImg.enabled = false;
         yield return new WaitForSeconds(2f);
         dialogoAnimator.SetBool("MostrarDialogo", true);
         DialogosManager.GetInstance().IniciarDialogo(inkJSON);
+
+        // Esperar a que termine el diálogo
+        while (dialogosManager.dialogoActivo)
+        {
+            yield return null;
+        }
+
+        if (animalesContador < 4)
+        {
+            animalesContador++;
+        }
     }
 
     IEnumerator Pez()
     {
-        flagPez = true;
-        GameObject chapulin = GameObject.Find("pez");
+        GameObject pez = GameObject.Find("pez");
+        Animator pezAnimator = pez.GetComponent<Animator>();
         this.GetComponent<Collider2D>().enabled = false;
-        chapulinAnimator = chapulin.GetComponent<Animator>();
-        chapulinAnimator.SetBool("Desaparecer", true);
+        pezAnimator.SetBool("Desaparecer", true);
         JoseImg.enabled = false;
         MetztliImg.enabled = false;
         yield return new WaitForSeconds(2f);
         dialogoAnimator.SetBool("MostrarDialogo", true);
         DialogosManager.GetInstance().IniciarDialogo(inkJSON);
+
+        // Esperar a que termine
+        while (dialogosManager.dialogoActivo)
+        {
+            yield return null;
+        }
+
+        if (animalesContador < 4)
+        {
+            animalesContador++;
+        }
     }
 
     IEnumerator Pavo()
     {
-        flagPavo = true;
-        GameObject chapulin = GameObject.Find("pavo");
+        GameObject pavo = GameObject.Find("pavo");
+        Animator pavoAnimator = pavo.GetComponent<Animator>();
         this.GetComponent<Collider2D>().enabled = false;
-        chapulinAnimator = chapulin.GetComponent<Animator>();
-        chapulinAnimator.SetBool("Desaparecer", true);
+        pavoAnimator.SetBool("Desaparecer", true);
         JoseImg.enabled = false;
         MetztliImg.enabled = false;
         yield return new WaitForSeconds(2f);
         dialogoAnimator.SetBool("MostrarDialogo", true);
         DialogosManager.GetInstance().IniciarDialogo(inkJSON);
+
+        // Esperar a que termine
+        while (dialogosManager.dialogoActivo)
+        {
+            yield return null;
+        }
+
+        if (animalesContador < 4)
+        {
+            animalesContador++;
+        }
     }
 }
