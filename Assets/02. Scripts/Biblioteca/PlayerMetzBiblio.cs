@@ -9,6 +9,9 @@ public class PlayerMetzBiblio : MonoBehaviour
 
     private bool dialogo = false;
 
+    [Header("Elemento de Audio")]
+    [SerializeField] private AudioSource audioSource;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -24,10 +27,18 @@ public class PlayerMetzBiblio : MonoBehaviour
             anim.SetFloat("MovX", mov.x);//izq der
             anim.SetFloat("MovY", mov.y);//arriba ab
             anim.SetBool("walking", true);
+
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+                audioSource.loop = true;
+            }
         }
         else
         {
             anim.SetBool("walking", false);
+
+            audioSource.Stop();
         }
     }
     void FixedUpdate()

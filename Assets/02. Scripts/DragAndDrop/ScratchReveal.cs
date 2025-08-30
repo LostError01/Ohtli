@@ -25,6 +25,10 @@ public class ScratchReveal : MonoBehaviour
     [Header("Botones para pegar parches")]
     [SerializeField] private List<Button> botonesPegarParche = new List<Button>();
 
+    [Header("Elementos de Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip avisoAudio;
+
     //Bandera para pincel
     private bool pincelClickeado = false;
 
@@ -120,6 +124,8 @@ public class ScratchReveal : MonoBehaviour
                 }
                 else if (!ButtonFunctions.brochaSeleccionada && !ButtonFunctions.bisturiSeleccionado && !ButtonFunctions.pincelSeleccionado)
                 { 
+                    audioSource.PlayOneShot(avisoAudio);
+
                     scratch01Clicked = true;
                     scratch01.SetActive(true);
                     scratch01SinMarcar.SetActive(true);
@@ -137,6 +143,8 @@ public class ScratchReveal : MonoBehaviour
                 }
                 else if (!ButtonFunctions.brochaSeleccionada && !ButtonFunctions.bisturiSeleccionado && !ButtonFunctions.pincelSeleccionado)
                 {
+                    audioSource.PlayOneShot(avisoAudio);
+
                     scratch02Clicked = true;
                     scratch02.SetActive(true);
                     scratch02SinMarcar.SetActive(true);
@@ -154,6 +162,8 @@ public class ScratchReveal : MonoBehaviour
                 }
                 else if (!ButtonFunctions.brochaSeleccionada && !ButtonFunctions.bisturiSeleccionado && !ButtonFunctions.pincelSeleccionado)
                 {
+                    audioSource.PlayOneShot(avisoAudio);
+
                     scratch03Clicked = true;
                     scratch03.SetActive(true);
                     scratch03SinMarcar.SetActive(true);
@@ -171,6 +181,8 @@ public class ScratchReveal : MonoBehaviour
                 }
                 else if (!ButtonFunctions.brochaSeleccionada && !ButtonFunctions.bisturiSeleccionado && !ButtonFunctions.pincelSeleccionado)
                 {
+                    audioSource.PlayOneShot(avisoAudio);
+
                     scratch04Clicked = true;
                     scratch04.SetActive(true);
                     scratch04SinMarcar.SetActive(true);
@@ -233,6 +245,7 @@ public class ScratchReveal : MonoBehaviour
 
     private IEnumerator MostrarAviso()
     {
+        audioSource.PlayOneShot(avisoAudio);
         avisoAnim.SetBool("Start", true);
         yield return new WaitForSeconds(4f);
         avisoAnim.SetBool("Start", false);

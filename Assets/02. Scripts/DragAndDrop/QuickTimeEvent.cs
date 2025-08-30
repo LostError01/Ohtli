@@ -60,6 +60,10 @@ public class QuickTimeEvent : MonoBehaviour
     [Header("Botones de recortes")]
     [SerializeField] private List<GameObject> botonesRecortes = new List<GameObject>();
 
+    [Header("Elementos de Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioVentana;
+
 
     private void Start()
     {
@@ -182,6 +186,7 @@ public class QuickTimeEvent : MonoBehaviour
     // Checa si la tecla presionada es la correcta
     private void CheckearTecla(char teclaPresionada)
     {
+        audioSource.PlayOneShot(audioVentana);
         // Si la tecla presionada es igual al elemento actual de la secuencia [pasoActual] = indice
         if (teclaPresionada == secuencia[pasoActual] && !tiempoAcabado)
         {
@@ -276,6 +281,7 @@ public class QuickTimeEvent : MonoBehaviour
     //Evento para botones
     public void EventoParche1()
     {
+        audioSource.PlayOneShot(audioVentana);
         tiempoLimite = 5f;
         if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0 && ButtonFunctions.bisturiSeleccionado)
         {
@@ -307,6 +313,7 @@ public class QuickTimeEvent : MonoBehaviour
 
     public void EventoParche2()
     {
+        audioSource.PlayOneShot(audioVentana);
         tiempoLimite = 5f;
         if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0 && ButtonFunctions.bisturiSeleccionado)
         {
@@ -338,6 +345,7 @@ public class QuickTimeEvent : MonoBehaviour
 
     public void EventoParche3()
     {
+        audioSource.PlayOneShot(audioVentana);
         tiempoLimite = 5f;
         if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0 && ButtonFunctions.bisturiSeleccionado)
         {
@@ -368,6 +376,7 @@ public class QuickTimeEvent : MonoBehaviour
 
     public void EventoParche4()
     {
+        audioSource.PlayOneShot(audioVentana);
         tiempoLimite = 5f;
         if (mouseHabilitado && hojaRecortarAnim.GetInteger("Accion") == 1 && parche == 0 && ButtonFunctions.bisturiSeleccionado)
         {

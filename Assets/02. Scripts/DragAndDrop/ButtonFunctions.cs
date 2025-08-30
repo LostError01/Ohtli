@@ -63,6 +63,11 @@ public class ButtonFunctions : MonoBehaviour
     [Header("Animator cronometro")]
     [SerializeField] private Animator cronometroAnim;
 
+    [Header("Elementos de Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip botonAudio;
+    [SerializeField] private AudioClip herramientaAudio;
+
     public static bool bisturiSeleccionado = false;
     public static bool brochaSeleccionada = false;
     public static bool pincelSeleccionado = false;
@@ -84,6 +89,8 @@ public class ButtonFunctions : MonoBehaviour
             animCamara.SetInteger("Pantalla", 1);
             StartCoroutine(MostrarPantalla1());
             botonLuzProvisional.enabled = false;
+
+            audioSource.PlayOneShot(botonAudio);
         }
     }
 
@@ -94,6 +101,8 @@ public class ButtonFunctions : MonoBehaviour
             animCamara.SetInteger("Pantalla", 0);
             StartCoroutine(MostrarPantalla0());
             botonLuzProvisional.enabled = true;
+
+            audioSource.PlayOneShot(botonAudio);
         }
     }
 
@@ -104,6 +113,8 @@ public class ButtonFunctions : MonoBehaviour
             animCamara.SetInteger("Pantalla", 2);
             hojaFinalAnim.SetTrigger("MoverHoja");
             StartCoroutine(MostrarPantalla3());
+
+            audioSource.PlayOneShot(botonAudio);
         }
     }
 
@@ -113,16 +124,22 @@ public class ButtonFunctions : MonoBehaviour
         {
             luzAnim.SetBool("Encender", true);
             PantallaLuzAnim.SetBool("Encendida", true);
+
+            audioSource.PlayOneShot(botonAudio);
         }
         else
         {
             luzAnim.SetBool("Encender", false);
             PantallaLuzAnim.SetBool("Encendida", false);
+
+            audioSource.PlayOneShot(botonAudio);
         }
     }
 
     public void Bisturi()
     {
+        audioSource.PlayOneShot(herramientaAudio);
+
         iconoBisturi.enabled = true;
         iconoBrocha.enabled = false;
         iconoPincel.enabled = false;
@@ -134,6 +151,8 @@ public class ButtonFunctions : MonoBehaviour
 
     public void Brocha()
     {
+        audioSource.PlayOneShot(herramientaAudio);
+
         iconoBisturi.enabled = false;
         iconoBrocha.enabled = true;
         iconoPincel.enabled = false;
@@ -145,6 +164,8 @@ public class ButtonFunctions : MonoBehaviour
 
     public void Pincel()
     {
+        audioSource.PlayOneShot(herramientaAudio);
+
         iconoBisturi.enabled = false;
         iconoBrocha.enabled = false;
         iconoPincel.enabled = true;
@@ -156,6 +177,8 @@ public class ButtonFunctions : MonoBehaviour
 
     public void NoHerramienta()
     {
+        audioSource.PlayOneShot(botonAudio);
+
         iconoBisturi.enabled = false;
         iconoBrocha.enabled = false;
         iconoPincel.enabled = false;
@@ -169,6 +192,8 @@ public class ButtonFunctions : MonoBehaviour
         if (papelAnim.GetInteger("Accion") == 0)
         {
             papelAnim.SetInteger("Accion", 1);
+
+            audioSource.PlayOneShot(botonAudio);
         }
     }
 
@@ -176,12 +201,15 @@ public class ButtonFunctions : MonoBehaviour
     {
         botonPesoAnim.SetBool("Mostrar", true);
         cronometroAnim.SetBool("Spawn", true);
+        audioSource.PlayOneShot(botonAudio);
         StartCoroutine(QuitarPeso());
     }
 
     public void ComenzarAventura()
     {
         SceneManager.LoadScene("Boturini RPG");
+
+        audioSource.PlayOneShot(herramientaAudio);
     }
 
     private IEnumerator MostrarPantalla0()

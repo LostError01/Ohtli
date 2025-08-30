@@ -70,7 +70,6 @@ public class Dialogos : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                mobilePJ2.speed = 0;
                 dialogoAnimator.SetBool("MostrarDialogo", true);
                 mobilePJ2Animator.SetTrigger("Jose");
                 PJ1Animator.SetTrigger("Metztli");
@@ -106,17 +105,13 @@ public class Dialogos : MonoBehaviour
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
             }
         }
-        else
-        {
-            mobilePJ2.speed = 1;
-        }
 
         //Escena biblioteca
         if (playerInTrigger && this.gameObject.name == "JoseArea")
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                    mobilePJ2.speed = 0;
+                mobilePJ2.speed = 0;
                 dialogoAnimator.SetBool("MostrarDialogo",true);
                 mobilePJ2Animator.SetTrigger("Jose");
                 PJ1Animator.SetTrigger("Metztli");
@@ -148,7 +143,6 @@ public class Dialogos : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                mobilePJ2.speed = 0;
                 dialogoAnimator.SetBool("MostrarDialogo", true);
                 mobilePJ2Animator.SetTrigger("Jose");
                 PJ1Animator.SetTrigger("MetztliCubrebocas");
@@ -177,17 +171,12 @@ public class Dialogos : MonoBehaviour
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Right;
             }
         }
-        else
-        {
-            mobilePJ2.speed = 1;
-        }
 
         //Restauracion Version Distorsionada
         if (playerInTrigger && this.gameObject.name == "ZiloRestauracionB")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                mobilePJ2.speed = 0;
                 dialogoAnimator.SetBool("MostrarDialogo", true);
                 mobilePJ2Animator.SetTrigger("Zilo");
                 PJ1Animator.SetTrigger("MetztliCubrebocas");
@@ -223,10 +212,7 @@ public class Dialogos : MonoBehaviour
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
             }
         }
-        else
-        {
-            mobilePJ2.speed = 1;
-        }
+
 
         //Zilo en el codice Boturini
 
@@ -234,7 +220,6 @@ public class Dialogos : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                mobilePJ2.speed = 0;
                 dialogoAnimator.SetBool("MostrarDialogo", true);
                 mobilePJ2Animator.SetTrigger("Zilo");
                 PJ1Animator.SetTrigger("Metztli");
@@ -256,10 +241,6 @@ public class Dialogos : MonoBehaviour
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
             }
         }
-        else
-        {
-            mobilePJ2.speed = 1;
-        }
 
         //Dialogo Serpiente
 
@@ -269,10 +250,6 @@ public class Dialogos : MonoBehaviour
             {
                 StartCoroutine(Serpiente());
             }
-        }
-        else
-        {
-            mobilePJ2.speed = 1;
         }
 
         //Dialogo Arana
@@ -284,10 +261,6 @@ public class Dialogos : MonoBehaviour
                 StartCoroutine(Arana());
             }
         }
-        else
-        {
-            mobilePJ2.speed = 1;
-        }
 
         //Dialogo Chapulin
 
@@ -298,10 +271,6 @@ public class Dialogos : MonoBehaviour
                 StartCoroutine(Chapulin());
             }
         }
-        else
-        {
-            mobilePJ2.speed = 1;
-        }
 
         //Dialogo Zilo Codice Mendoza
 
@@ -309,7 +278,6 @@ public class Dialogos : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                mobilePJ2.speed = 0;
                 dialogoAnimator.SetBool("MostrarDialogo", true);
                 mobilePJ2Animator.SetTrigger("Zilo");
                 PJ1Animator.SetTrigger("Metztli");
@@ -331,10 +299,6 @@ public class Dialogos : MonoBehaviour
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
             }
         }
-        else
-        {
-            mobilePJ2.speed = 1;
-        }
 
         //Dialogo Serpiente 02
 
@@ -344,10 +308,6 @@ public class Dialogos : MonoBehaviour
             {
                 StartCoroutine(Serpiente02());
             }
-        }
-        else
-        {
-            mobilePJ2.speed = 1;
         }
 
         //Dialogo Chapulin
@@ -359,10 +319,6 @@ public class Dialogos : MonoBehaviour
                 StartCoroutine(Chapulin02());
             }
         }
-        else
-        {
-            mobilePJ2.speed = 1;
-        }
 
         //Dialogo Pez
 
@@ -373,10 +329,6 @@ public class Dialogos : MonoBehaviour
                 StartCoroutine(Pez());
             }
         }
-        else
-        {
-            mobilePJ2.speed = 1;
-        }
 
         //Dialogo Pavo
 
@@ -386,10 +338,6 @@ public class Dialogos : MonoBehaviour
             {
                 StartCoroutine(Pavo());
             }
-        }
-        else
-        {
-            mobilePJ2.speed = 1;
         }
 
         //Dialogo Aldeano
@@ -404,10 +352,6 @@ public class Dialogos : MonoBehaviour
                 dialogoAnimator.SetBool("MostrarDialogo", true);
                 DialogosManager.GetInstance().IniciarDialogo(inkJSON);
             }
-        }
-        else
-        {
-            mobilePJ2.speed = 1;
         }
 
         // Aguila
@@ -442,10 +386,6 @@ public class Dialogos : MonoBehaviour
                 aguilaTeclaE = false;
             }
         }
-        else
-        {
-            mobilePJ2.speed = 1;
-        }
 
         //Dialogo Huitzilopochtli
 
@@ -456,7 +396,6 @@ public class Dialogos : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                mobilePJ2.speed = 0;
                 dialogoAnimator.SetBool("MostrarDialogo", true);
                 mobilePJ2Animator.SetTrigger("Dios");
                 PJ1Animator.SetTrigger("Metztli");
@@ -484,10 +423,6 @@ public class Dialogos : MonoBehaviour
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
             }
         }
-        else
-        {
-            mobilePJ2.speed = 1;
-        }
 
         //Dialogo Jose Lobby B
 
@@ -497,7 +432,6 @@ public class Dialogos : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                mobilePJ2.speed = 0;
                 dialogoAnimator.SetBool("MostrarDialogo", true);
                 mobilePJ2Animator.SetTrigger("Jose");
                 PJ1Animator.SetTrigger("Metztli");
@@ -518,10 +452,6 @@ public class Dialogos : MonoBehaviour
 
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
             }
-        }
-        else
-        {
-            mobilePJ2.speed = 1;
         }
     }
 
