@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
             score++;
             if (score == 10)
             {
-                SceneManager.LoadScene("biblioteca");
+                SceneManager.LoadScene("E1");
             }
 
         }

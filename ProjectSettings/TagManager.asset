@@ -21,6 +21,8 @@ TagManager:
   - Checkpoint03
   - MovingPlatform
   - Checkpoint04
+  - NPC01
+  - Teleport
   layers:
   - Default
   - TransparentFX

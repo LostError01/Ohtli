@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerMetzBiblio : MonoBehaviour
 {
     public float speed = 4f;
@@ -54,6 +54,16 @@ public class PlayerMetzBiblio : MonoBehaviour
             dialogo = false;
             prb.MovePosition
             (prb.position + mov * speed * Time.deltaTime);
+        }
+    }
+
+    //Teletransporte a algunas escenas
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Teleport") && SceneManager.GetActiveScene().name == "zonarestauracion")
+        {
+           SceneManager.LoadScene("E1"); //Debe mandar a E3 cuando este lista
         }
     }
 }

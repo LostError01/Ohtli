@@ -208,7 +208,7 @@ public class ButtonFunctions : MonoBehaviour
 
     public void ComenzarAventura()
     {
-        SceneManager.LoadScene("Boturini RPG");
+        SceneManager.LoadScene("E1");
 
         audioSource.PlayOneShot(herramientaAudio);
     }

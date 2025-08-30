@@ -5,6 +5,7 @@ using System.Collections;
 using Unity.Mathematics;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class juego : MonoBehaviour
 {
@@ -112,7 +113,7 @@ public class juego : MonoBehaviour
     }
     private void ganar()
     {
-
+        SceneManager.LoadScene("E1");
     }
 
 }

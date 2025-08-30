@@ -46,7 +46,7 @@ public class Dialogos : MonoBehaviour
     private bool aguilaTeclaE = false;
 
     //VARIABLES DE CONTROL DE ANIMALES
-    private static int animalesContador = 0;
+    public static int animalesContador = 0;
 
     private void Start()
     {
@@ -59,11 +59,11 @@ public class Dialogos : MonoBehaviour
         animalesContador = 0;
     }
 
-    private void Update()
+    public void Update()
     {
         if (animalesContador == 3 && SceneManager.GetActiveScene().name == "Boturini RPG")
         {
-            Debug.Log("Ganaste con la cantida de animales: " + animalesContador);
+            Debug.Log("Ya encontraste los 3 animales");
         }
 
 
@@ -218,6 +218,11 @@ public class Dialogos : MonoBehaviour
                 MetztliImg.enabled = false;
 
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
+            }
+
+            if(dialogosManager.parrafoActual == 11)
+            {
+                SceneManager.LoadScene("E1");
             }
         }
 
@@ -391,6 +396,7 @@ public class Dialogos : MonoBehaviour
                 this.GetComponent<Collider2D>().enabled = false;
                 chapulinAnimator = chapulin.GetComponent<Animator>();
                 chapulinAnimator.SetBool("Desaparecer", true);
+                StartCoroutine(Aguila());
                 aguilaTeclaE = false;
             }
         }
@@ -430,6 +436,11 @@ public class Dialogos : MonoBehaviour
 
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
             }
+
+            if(dialogosManager.parrafoActual == 28)
+            {
+                SceneManager.LoadScene("E1");
+            }
         }
 
         //Dialogo Jose Lobby B
@@ -459,6 +470,11 @@ public class Dialogos : MonoBehaviour
                 MetztliImg.enabled = false;
 
                 dialogosManager.dialogoText.horizontalAlignment = TMPro.HorizontalAlignmentOptions.Left;
+            }
+
+            if(dialogosManager.parrafoActual == 8)
+            {
+                SceneManager.LoadScene("E1");
             }
         }
     }
@@ -656,5 +672,11 @@ public class Dialogos : MonoBehaviour
         {
             animalesContador++;
         }
+    }
+
+    IEnumerator Aguila()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("E1");
     }
 }
