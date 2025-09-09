@@ -6,6 +6,7 @@ using TMPro;
 using Ink.Parsed;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class ButtonFunctions : MonoBehaviour
 {
@@ -81,6 +82,12 @@ public class ButtonFunctions : MonoBehaviour
         iconoBisturi.enabled = false;
         iconoBrocha.enabled = false;
         iconoPincel.enabled = false;
+
+        //Desactivar Sprites de recortes
+        GameObject.Find("Boton Parche1 (Contiene el script del evento)").GetComponent<SpriteRenderer>().enabled = false;
+        GameObject.Find("Boton Parche2").GetComponent<SpriteRenderer>().enabled = false;
+        GameObject.Find("Boton Parche3").GetComponent<SpriteRenderer>().enabled = false;
+        GameObject.Find("Boton Parche4").GetComponent<SpriteRenderer>().enabled = false;
     }
 
     public void PantallaRecortes()
@@ -225,6 +232,12 @@ public class ButtonFunctions : MonoBehaviour
         pantalla01Canvas.enabled = false;
         yield return new WaitForSeconds(0.4f);
         pantalla02Canvas.enabled = true;
+
+        //Activar Sprites de recortes
+        GameObject.Find("Boton Parche1 (Contiene el script del evento)").GetComponent<SpriteRenderer>().enabled = true;
+        GameObject.Find("Boton Parche2").GetComponent<SpriteRenderer>().enabled = true;
+        GameObject.Find("Boton Parche3").GetComponent<SpriteRenderer>().enabled = true;
+        GameObject.Find("Boton Parche4").GetComponent<SpriteRenderer>().enabled = true;
     }
 
     private IEnumerator MostrarPantalla3()
