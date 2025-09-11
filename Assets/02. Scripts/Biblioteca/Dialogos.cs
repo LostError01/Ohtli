@@ -396,6 +396,9 @@ public class Dialogos : MonoBehaviour
                 this.GetComponent<Collider2D>().enabled = false;
                 chapulinAnimator = chapulin.GetComponent<Animator>();
                 chapulinAnimator.SetBool("Desaparecer", true);
+                GameObject Zilo = GameObject.Find("Zilo01");
+                Animator ZiloAnimator = Zilo.GetComponent<Animator>();
+                ZiloAnimator.SetBool("Desaparecer",true);
                 StartCoroutine(Aguila());
                 aguilaTeclaE = false;
             }
