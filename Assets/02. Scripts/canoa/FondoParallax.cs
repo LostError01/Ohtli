@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class FondoParallax : MonoBehaviour
 {
-    public float parallaxspeed = 0.2f;//velocidad mov
-    public RawImage fondo; // public = visible en unity
+    public float parallaxspeed = 0.2f;
+    public RawImage fondo; 
 
     void Update()
     {   
@@ -12,8 +12,8 @@ public class FondoParallax : MonoBehaviour
     }
     void Parallax()
     {
-        float finalspeed = parallaxspeed * Time.deltaTime;//0.2*60fps
-        fondo.uvRect = new Rect(fondo.uvRect.x + finalspeed, 0f, 1f, 1f);//0.2
+        float finalspeed = parallaxspeed * Time.deltaTime;
+        fondo.uvRect = new Rect(fondo.uvRect.x + finalspeed, 0f, 1f, 1f);
     }
    
 }

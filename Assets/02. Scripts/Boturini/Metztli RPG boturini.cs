@@ -6,7 +6,7 @@ public class MetztliRPGboturini : MonoBehaviour
     Animator anim;
     Rigidbody2D prb;
     Vector2 mov;
-    CircleCollider2D AttackCollider;//<<<<<<<
+    CircleCollider2D AttackCollider;
 
     [Header("Script Dialogos Manager")]
     [SerializeField] private DialogosManager dialogosManager;
@@ -34,13 +34,13 @@ public class MetztliRPGboturini : MonoBehaviour
             return;
         }
 
-        mov = new Vector2(//WASD diagonales
+        mov = new Vector2(
          Input.GetAxisRaw("Horizontal"),
          Input.GetAxisRaw("Vertical"));
-        if (mov != Vector2.zero) //! diferente
+        if (mov != Vector2.zero)
         {
-            anim.SetFloat("MovX", mov.x);//izq der
-            anim.SetFloat("MovY", mov.y);//arriba ab
+            anim.SetFloat("MovX", mov.x);
+            anim.SetFloat("MovY", mov.y);
             anim.SetBool("walking", true);
         }
         else
@@ -51,11 +51,11 @@ public class MetztliRPGboturini : MonoBehaviour
         anim.GetCurrentAnimatorStateInfo(0);
         bool attacking =
         stateInfo.IsName("MB_Attack");
-        // Ataque con espacio
-        if (Input.GetMouseButtonDown(1) && !attacking)
+        if (Input.GetMouseButtonDown(0) && !attacking)
         {
             anim.SetTrigger("Attacking");
             audioSource.PlayOneShot(ataqueAudio);
+            Debug.Log("ataco");
         }
         if (mov != Vector2.zero)
             AttackCollider.offset =
@@ -63,7 +63,6 @@ public class MetztliRPGboturini : MonoBehaviour
         if (attacking)
         {
             float playbackTime = stateInfo.normalizedTime;
-            //Mientras se esta atacando no se puede mover
             mov = Vector2.zero;
             if (playbackTime > 0.2 && playbackTime < 0.6) 
             {
@@ -71,7 +70,7 @@ public class MetztliRPGboturini : MonoBehaviour
             }
             else
             {
-                AttackCollider.enabled = false;//ocultar ataque
+                AttackCollider.enabled = false;
             }
         }
     }

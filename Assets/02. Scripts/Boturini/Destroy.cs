@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Destroy : MonoBehaviour
 {
-    public string destroyState;//nombre
+    public string destroyState;
     public float timeForDisable;
     public float life =1;
     private float hit;
@@ -39,8 +39,6 @@ public class Destroy : MonoBehaviour
             }    
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
         hpSlider.value = hit;

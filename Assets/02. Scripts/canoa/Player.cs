@@ -9,8 +9,6 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public float jump = 7f;
     private int score = 0;
-    //private AudioSource audioPlayer;
-   // public AudioClip saltar;
 
 
     void Update()
@@ -19,9 +17,6 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.linearVelocity = new Vector2(0, jump);
-            //audioPlayer = GetComponent<AudioSource>();
-            //audioPlayer.clip = saltar;
-            //audioPlayer.Play();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

@@ -12,8 +12,6 @@ public class tiempo : MonoBehaviour
     {
         letreto();
     }
-
-    // Update is called once per frame
     void Update()
     {
         segundos -= Time.deltaTime;
