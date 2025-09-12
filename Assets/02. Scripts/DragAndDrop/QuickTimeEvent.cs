@@ -176,6 +176,9 @@ public class QuickTimeEvent : MonoBehaviour
     // Funcion que verifica si se presionan las teclas correctas
     private void VerificarTeclas()
     {
+        // Solo procesar teclas si el mouse (y por tanto el input) está habilitado
+        if (!mouseHabilitado) return;
+
         // Si tocas letra correcta, avanza al siguiente paso
         if (Input.GetKeyDown(KeyCode.A)) CheckearTecla('A');
         if (Input.GetKeyDown(KeyCode.S)) CheckearTecla('S');

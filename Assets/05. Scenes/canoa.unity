@@ -6253,7 +6253,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 15
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1066989277
 RectTransform:
@@ -7036,7 +7036,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 20
   m_Sprite: {fileID: -9080072142282165747, guid: 2e2797ab654c55542a7d7d6fd87654e4, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -8274,6 +8274,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262539347213217724, guid: 77e41ff960448494891bc803b3023dae, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2146096073859480601, guid: 77e41ff960448494891bc803b3023dae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.08
